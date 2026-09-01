@@ -1,0 +1,32 @@
+.bh-sheet {
+  padding-top: 44px;
+}
+
+.bh-sheet-header {
+  align-items: flex-start;
+  padding-bottom: 18px;
+}
+
+.bh-sheet-title {
+  text-align: left;
+  line-height: 0.9;
+}
+
+.bh-sheet-close {
+  margin-top: 7px;
+}
+/* 
+.bh-history-tags {
+  margin-top: 0;
+} */
+
+@media (max-width: 768px) {
+  .bottom-sheet-header.bh-sheet-header {
+    padding-bottom: 0;
+  }
+
+  .history-tags.bh-history-tags {
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+}

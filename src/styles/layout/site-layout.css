@@ -1,0 +1,22 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: var(--layout-header-height) 1fr var(--layout-footer-height);
+  background: radial-gradient(
+    circle at top,
+    #ffffff 0%,
+    #e8eef6 55%,
+    #dce5f1 100%
+  );
+}
+
+.content {
+  background: var(--color-surface);
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .page {
+    grid-template-rows: 86px 1fr var(--layout-footer-height);
+  }
+}

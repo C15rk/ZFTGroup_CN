@@ -1,0 +1,255 @@
+.information-link {
+  padding: 0;
+}
+
+.information-top {
+  min-height: 120px;
+  padding: 48px 48px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.information-logo {
+  display: block;
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+.information-bottom {
+  min-height: 320px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-bottom: 48px;
+}
+
+.information-content-left,
+.information-content-right {
+  padding-top: 0px;
+}
+
+.information-content-left {
+  padding-left: 48px;
+  padding-right: 0;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 60px;
+}
+
+.information-content-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 48px;
+}
+
+.information-content-left p {
+  margin: 0;
+  font-family: "Alibaba PuHuiTi 3.0";
+  font-size: 24px;
+  font-weight: 100;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.2;
+  text-transform: none;
+  color: var(--color-text);
+  white-space: pre-line;
+}
+
+.information-left-middle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.office-detail-full {
+  grid-column: 1 / -1;
+}
+
+.office-detail h3 {
+  margin: 0;
+}
+
+.office-address-row {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  column-gap: 10px;
+  align-items: start;
+  /* margin-bottom: 8px; */
+}
+
+.detail-key {
+  margin: 0;
+}
+
+.detail-value {
+  margin: 0;
+}
+
+.office-detail p {
+  margin: 0;
+}
+
+.office-detail h3,
+.detail-key,
+.detail-value,
+.office-detail p {
+  font-family: "Alibaba PuHuiTi 3.0";
+  font-size: 24px;
+  font-weight: 100;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.2;
+  text-transform: none;
+  color: var(--color-text);
+  white-space: pre-line;
+}
+
+.detail-key,
+.detail-value,
+.office-detail p {
+  font-family: "Alibaba PuHuiTi 3.0";
+  font-size: 20px;
+  font-weight: 100;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.2;
+  text-transform: none;
+  color: var(--color-text);
+  white-space: pre-line;
+}
+
+.information-left-bottom {
+  display: grid;
+  gap: 12px;
+  align-content: end;
+  justify-items: start;
+}
+
+.qr-row {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.qr-image {
+  width: 86px;
+  height: 86px;
+  object-fit: contain;
+}
+
+.qr-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.social-logo {
+  display: block;
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+
+.qr-info p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.information-map {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .information-link {
+    padding: 0;
+  }
+
+  .information-top {
+    min-height: 84px;
+    padding: 16px;
+    padding-bottom: 20px;
+  }
+
+  .information-logo {
+    height: 56px;
+  }
+
+  .information-bottom,
+  .information-left-middle {
+    grid-template-columns: 1fr;
+  }
+
+  .information-bottom {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+  }
+
+  .information-content-left,
+  .information-content-right {
+    padding: 0 16px;
+  }
+
+  .information-content-right {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .information-content-left {
+    order: 2;
+  }
+
+  .information-content-left {
+    gap: 24px;
+  }
+
+  .information-content-left p,
+  .office-detail h3,
+  .detail-key,
+  .detail-value,
+  .office-detail p {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .information-left-bottom {
+    gap: 10px;
+  }
+
+  .qr-row {
+    grid-template-columns: 72px 1fr;
+    column-gap: 10px;
+  }
+
+  .qr-image {
+    width: 72px;
+    height: 72px;
+  }
+
+  .social-logo {
+    height: 18px;
+  }
+
+  .qr-info p {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .information-map {
+    max-width: 100%;
+  }
+}

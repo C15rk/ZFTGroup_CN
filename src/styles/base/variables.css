@@ -1,0 +1,17 @@
+:root {
+  --font-family-base: "Alibaba PuHuiTi 3.0";
+
+  --color-text: #000000;
+  --color-body-bg: #f2f5f9;
+  --color-surface: #ffffff;
+  --color-divider: #000000;
+  --color-footer-bg: #1130cc;
+  --color-link-hover: #edf3fb;
+
+  --layout-header-height: 115px;
+  --layout-footer-height: 48px;
+  --space-header-inline: 36px;
+
+  --company-card-width: 347px;
+  --company-card-height: 180px;
+}

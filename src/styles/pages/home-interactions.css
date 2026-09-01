@@ -1,0 +1,51 @@
+.section-toggle-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.section-toggle-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transform: rotate(-45deg);
+  transition: transform 1.05s cubic-bezier(0.22, 0.84, 0.26, 1);
+  will-change: transform;
+}
+
+.section-toggle-button[aria-expanded='true'] .section-toggle-icon {
+  transform: rotate(0deg);
+}
+
+.brand-collapsible {
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 1.35s cubic-bezier(0.22, 0.84, 0.26, 1),
+    opacity 1s cubic-bezier(0.25, 0.8, 0.25, 1),
+    transform 1.35s cubic-bezier(0.22, 0.84, 0.26, 1);
+  transform: translateY(-10px);
+  will-change: max-height, opacity, transform;
+}
+
+.brand-collapsible-inner {
+  min-height: 0;
+  overflow: hidden;
+  padding-top: 0;
+}
+
+.brand-collapsible.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  padding-bottom: 5px;
+}

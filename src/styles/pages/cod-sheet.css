@@ -1,0 +1,150 @@
+.cod-sheet {
+  --cod-horizontal-gutter: 24px;
+  --cod-copy-side-margin: 123px;
+  --cod-text-side-margin: clamp(24px, 6.40625vw, 123px);
+  --cod-grid-gap: 60px;
+  --cod-font-family: "Alibaba PuHuiTi 3.0", "Arial", sans-serif;
+  --cod-title-line-height: 0.9;
+  padding-top: 44px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cod-sheet-header {
+  align-items: flex-start;
+  padding-bottom: 18px;
+}
+
+.cod-sheet-title {
+  text-align: left;
+  margin-bottom: 50px;
+  padding-bottom: 8px;
+}
+
+.cod-sheet-title-line {
+  display: block;
+  line-height: var(--cod-title-line-height);
+}
+
+.cod-sheet-close {
+  margin-top: 7px;
+}
+
+.cod-content {
+  flex: 1 1 auto;
+}
+
+.cod-sheet > .footer {
+  margin-top: auto;
+}
+
+.cod-lead {
+  margin: 77px var(--cod-horizontal-gutter) 62px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 60px;
+  line-height: 0.9;
+  font-family: var(--cod-font-family);
+  font-weight: 500;
+  color: #bcbcbc;
+}
+
+.cod-body-grid {
+  margin: 0 var(--cod-copy-side-margin) 62px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--cod-grid-gap);
+  align-items: start;
+}
+
+.cod-body-left {
+  display: grid;
+  gap: 18px;
+  margin-left: calc(var(--cod-text-side-margin) - var(--cod-copy-side-margin));
+}
+
+.cod-body-right {
+  justify-self: end;
+  width: 100%;
+}
+
+.cod-sheet .cod-body-left p {
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.cod-side-image {
+  display: block;
+  width: calc(
+    100% + var(--cod-copy-side-margin) + var(--cod-horizontal-gutter)
+  );
+  margin-right: calc(
+    (var(--cod-copy-side-margin) + var(--cod-horizontal-gutter)) * -1
+  );
+  margin-left: auto;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.cod-lines .cod-line-wrap {
+  overflow: visible;
+}
+
+.cod-lines .cod-line {
+  display: block;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.cod-lines.is-visible .cod-line {
+  animation: cod-line-fade 3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--line-index) * 300ms);
+}
+
+@keyframes cod-line-fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .cod-sheet {
+    --cod-horizontal-gutter: 16px;
+    --cod-copy-side-margin: 0px;
+    --cod-text-side-margin: 0px;
+  }
+
+  .cod-lead {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .cod-body-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 24px;
+    gap: 32px;
+  }
+
+  .cod-side-image {
+    width: calc(100% + var(--cod-horizontal-gutter));
+    margin-right: calc(var(--cod-horizontal-gutter) * -1);
+  }
+
+  .cod-sheet .cod-body-left p {
+    font-size: 14px;
+  }
+}

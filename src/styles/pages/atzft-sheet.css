@@ -1,0 +1,149 @@
+.atzft-sheet {
+  --atzft-horizontal-gutter: 24px;
+  --atzft-copy-side-margin: 123px;
+  --atzft-text-side-margin: clamp(24px, 6.40625vw, 123px);
+  --atzft-grid-gap: 60px;
+  --atzft-font-family: "Alibaba PuHuiTi 3.0", "Arial", sans-serif;
+  padding-top: 44px;
+  display: flex;
+  flex-direction: column;
+}
+
+.atzft-sheet-header {
+  align-items: flex-start;
+  padding-bottom: 18px;
+}
+
+.atzft-sheet-title {
+  text-align: left;
+}
+
+.atzft-sheet-title-line {
+  display: block;
+  line-height: 0.9;
+}
+
+.atzft-sheet-close {
+  margin-top: 7px;
+}
+
+.atzft-content {
+  flex: 1 1 auto;
+}
+
+.atzft-sheet > .footer {
+  margin-top: auto;
+}
+
+.atzft-lead {
+  margin: 77px var(--atzft-horizontal-gutter) 62px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 60px;
+  line-height: 0.9;
+  font-family: var(--atzft-font-family);
+  font-weight: 500;
+  color: #bcbcbc;
+}
+
+.atzft-body-grid {
+  margin: 0 var(--atzft-copy-side-margin) 62px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--atzft-grid-gap);
+  align-items: start;
+}
+
+.atzft-body-left {
+  display: grid;
+  gap: 18px;
+  margin-left: calc(
+    var(--atzft-text-side-margin) - var(--atzft-copy-side-margin)
+  );
+}
+
+.atzft-body-right {
+  justify-self: end;
+  width: 100%;
+}
+
+.atzft-sheet .atzft-body-left p {
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.atzft-side-image {
+  display: block;
+  width: calc(
+    100% + var(--atzft-copy-side-margin) + var(--atzft-horizontal-gutter)
+  );
+  margin-right: calc(
+    (var(--atzft-copy-side-margin) + var(--atzft-horizontal-gutter)) * -1
+  );
+  margin-left: auto;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.atzft-lines .atzft-line-wrap {
+  overflow: visible;
+}
+
+.atzft-lines .atzft-line {
+  display: block;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.atzft-lines.is-visible .atzft-line {
+  animation: atzft-line-fade 3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--line-index) * 300ms);
+}
+
+@keyframes atzft-line-fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .atzft-sheet {
+    --atzft-horizontal-gutter: 16px;
+    --atzft-copy-side-margin: 0px;
+    --atzft-text-side-margin: 0px;
+  }
+
+  .atzft-lead {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .atzft-body-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 24px;
+    gap: 32px;
+  }
+
+  .atzft-side-image {
+    width: calc(100% + var(--atzft-horizontal-gutter));
+    margin-right: calc(var(--atzft-horizontal-gutter) * -1);
+  }
+
+  .atzft-sheet .atzft-body-left p {
+    font-size: 14px;
+  }
+}
