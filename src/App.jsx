@@ -34,6 +34,10 @@ export default function App() {
             path="corporate-culture-and-values"
             element={<HomePage forceCorporateCultureValuesOpen />}
           />
+          <Route
+            path="public-welfare-and-community-impact"
+            element={<HomePage forcePublicWelfareCommunityOpen />}
+          />
           <Route path="news" element={<HomePage forceNewsOpen />} />
           <Route
             path="corporate-honors"
@@ -61,6 +65,10 @@ export default function App() {
           <Route
             path="non-discrimination-policy"
             element={<HomePage forceNonDiscriminationPolicyOpen />}
+          />
+          <Route
+            path="recruitment-and-human-resources"
+            element={<HomePage forceRecruitmentHumanResourcesOpen />}
           />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>

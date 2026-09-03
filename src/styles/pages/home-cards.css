@@ -407,3 +407,15 @@
     gap: 2px;
   }
 }
+
+.actions-card-bg-pwc {
+  background-image: url("/sde.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.join-card-bg-rhr {
+  background-image: url("/cod.webp");
+  background-size: cover;
+  background-position: center;
+}

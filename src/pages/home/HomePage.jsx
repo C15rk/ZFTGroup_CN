@@ -8,6 +8,7 @@ import InnovationSheet from "../our-brand/innovation/innovation.jsx";
 import SustainableDevelopmentESGSheet from "../our-actions/sustainable-development-esg/SustainableDevelopmentESGSheet.jsx";
 import EthicsCorporateResbosilbility from "../our-actions/ethics-corporate-resbosilbility/EthicsCorporateResbosilbility.jsx";
 import CorporateCultureValues from "../our-actions/corporate-culture-values/CorporateCultureValues.jsx";
+import PublicWelfareCommunity from "../our-actions/public-welfare-community/PublicWelfareCommunity.jsx";
 import NewsSheet from "../our-actions/news/news.jsx";
 import CorproateHonors from "../our-company/CorproateHonors.jsx";
 import GlobalPresenceSheet from "../global-presence/gp/GlobalPresence.jsx";
@@ -18,6 +19,7 @@ import InvestorsSheet from "../cooperation-investment/investors/investors.jsx";
 import AtZFTGroupSheet from "../join-us/at-zft-group/AtZFTGroup.jsx";
 import CareerOpportunitiesDevelopmentSheet from "../join-us/career-opportunities-development/CareerOpportunitiesDevelopment.jsx";
 import NonDiscriminationPolicySheet from "../join-us/non-discrimination-policy/NonDiscriminationPolicy.jsx";
+import RecruitmentHumanResources from "../join-us/recruitment-human-resources/RecruitmentHumanResources.jsx";
 import { siteSections } from "../../data/sections.js";
 
 // Popup scroll behavior switch for client demos:
@@ -40,6 +42,8 @@ const PAGE_TITLE_MAP = {
   "/ethics-and-corporate-responsibility":
     "Ethics & Corporate Responsibility - ZFT Group",
   "/corporate-culture-and-values": "Corporate Culture & Values - ZFT Group",
+  "/public-welfare-and-community-impact":
+    "Public Welfare & Community Impact - ZFT Group",
   "/news": "News - ZFT Group",
   "/corporate-honors": "Corporate Honors - ZFT Group",
   "/global-presence": "Global Presence - ZFT Group",
@@ -51,6 +55,8 @@ const PAGE_TITLE_MAP = {
   "/career-opportunities-and-development":
     "Career Opportunities & Development - ZFT Group",
   "/non-discrimination-policy": "Non-Discrimination Policy - ZFT Group",
+  "/recruitment-and-human-resources":
+    "Recruitment & Human Resources - ZFT Group",
 };
 
 function SectionTitle({ label }) {
@@ -114,6 +120,7 @@ export default function HomePage({
   forceSustainableDevelopmentESGOpen = false,
   forceEthicsAndCorporateResponsibilityOpen = false,
   forceCorporateCultureValuesOpen = false,
+  forcePublicWelfareCommunityOpen = false,
   forceNewsOpen = false,
   forceCorporateHonorsOpen = false,
   forceGlobalPresenceOpen = false,
@@ -124,6 +131,7 @@ export default function HomePage({
   forceAtZftGroupOpen = false,
   forceCareerOpportunitiesAndDevelopmentOpen = false,
   forceNonDiscriminationPolicyOpen = false,
+  forceRecruitmentHumanResourcesOpen = false,
 }) {
   const [isBrandHistoryOpen, setIsBrandHistoryOpen] = useState(false);
   const [
@@ -139,6 +147,8 @@ export default function HomePage({
     setIsEthicsCorporateResbosilbilityOpen,
   ] = useState(false);
   const [isCorporateCultureValuesOpen, setIsCorporateCultureValuesOpen] =
+    useState(false);
+  const [isPublicWelfareCommunityOpen, setIsPublicWelfareCommunityOpen] =
     useState(false);
   const [isNewsSheetOpen, setIsNewsSheetOpen] = useState(false);
   const [isCorporateHonorsOpen, setIsCorporateHonorsOpen] = useState(false);
@@ -160,6 +170,10 @@ export default function HomePage({
   const [
     isNonDiscriminationPolicySheetOpen,
     setIsNonDiscriminationPolicySheetOpen,
+  ] = useState(false);
+  const [
+    isRecruitmentHumanResourcesOpen,
+    setIsRecruitmentHumanResourcesOpen,
   ] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
   const [sectionContentHeights, setSectionContentHeights] = useState({});
@@ -261,6 +275,7 @@ export default function HomePage({
     isSustainableDevelopmentESGOpen,
     isEthicsCorporateResbosilbilityOpen,
     isCorporateCultureValuesOpen,
+    isPublicWelfareCommunityOpen,
     isNewsSheetOpen,
     isCorporateHonorsOpen,
     isCorporateHonorsOpen,
@@ -272,6 +287,7 @@ export default function HomePage({
     isAtZFTGroupSheetOpen,
     isCareerOpportunitiesDevelopmentSheetOpen,
     isNonDiscriminationPolicySheetOpen,
+    isRecruitmentHumanResourcesOpen,
   ]);
 
   useEffect(() => {
@@ -319,6 +335,7 @@ export default function HomePage({
     isSustainableDevelopmentESGOpen,
     isEthicsCorporateResbosilbilityOpen,
     isCorporateCultureValuesOpen,
+    isPublicWelfareCommunityOpen,
     isNewsSheetOpen,
     isGlobalPresenceSheetOpen,
     isContactsByRegionSheetOpen,
@@ -328,6 +345,7 @@ export default function HomePage({
     isAtZFTGroupSheetOpen,
     isCareerOpportunitiesDevelopmentSheetOpen,
     isNonDiscriminationPolicySheetOpen,
+    isRecruitmentHumanResourcesOpen,
   ]);
 
   useEffect(() => {
@@ -374,6 +392,13 @@ export default function HomePage({
       location.pathname === "/corporate-culture-and-values"
     ) {
       setIsCorporateCultureValuesOpen(true);
+    }
+
+    if (
+      forcePublicWelfareCommunityOpen ||
+      location.pathname === "/public-welfare-and-community-impact"
+    ) {
+      setIsPublicWelfareCommunityOpen(true);
     }
 
     if (forceNewsOpen || location.pathname === "/news") {
@@ -427,6 +452,13 @@ export default function HomePage({
     ) {
       setIsNonDiscriminationPolicySheetOpen(true);
     }
+
+    if (
+      forceRecruitmentHumanResourcesOpen ||
+      location.pathname === "/recruitment-and-human-resources"
+    ) {
+      setIsRecruitmentHumanResourcesOpen(true);
+    }
   }, [
     location.pathname,
     forceBrandHistoryOpen,
@@ -436,6 +468,7 @@ export default function HomePage({
     forceSustainableDevelopmentESGOpen,
     forceEthicsAndCorporateResponsibilityOpen,
     forceCorporateCultureValuesOpen,
+    forcePublicWelfareCommunityOpen,
     forceNewsOpen,
     forceCorporateHonorsOpen,
     forceGlobalPresenceOpen,
@@ -446,6 +479,7 @@ export default function HomePage({
     forceAtZftGroupOpen,
     forceCareerOpportunitiesAndDevelopmentOpen,
     forceNonDiscriminationPolicyOpen,
+    forceRecruitmentHumanResourcesOpen,
   ]);
 
   const toggleSection = (key) => {
@@ -688,6 +722,33 @@ export default function HomePage({
                         <SectionCardTitle zh="企业文化与价值观" en={["Corporate","Culture","& Values"]} />
                       </button>
                       <button
+                        className="section-card has-media section-card-align-left actions-card-bg-pwc brand-history-trigger"
+                        type="button"
+                        onClick={() => {
+                          setIsBrandHistoryOpen(false);
+                          setIsRandDAndManufacturingCapabilitiesOpen(false);
+                          setIsProductsSolutionsOpen(false);
+                          setIsInnovationOpen(false);
+                          setIsSustainableDevelopmentESGOpen(false);
+                          setIsEthicsCorporateResbosilbilityOpen(false);
+                          setIsCorporateCultureValuesOpen(false);
+                          setIsNewsSheetOpen(false);
+                          navigate("/public-welfare-and-community-impact");
+                        }}
+                      >
+                        <span className="section-card-media" aria-hidden="true">
+                          <span className="section-card-media-inner">
+                            <img
+                              className="section-card-media-image"
+                              src="/sde.webp"
+                              alt=""
+                            />
+                            <span className="section-card-media-overlay" />
+                          </span>
+                        </span>
+                        <SectionCardTitle zh="公益与社区影响" en={["Public Welfare", "& Community", "Impact"]} />
+                      </button>
+                      <button
                         className="section-card has-media section-card-align-left actions-card-bg-news1 brand-history-trigger"
                         type="button"
                         onClick={() => {
@@ -698,6 +759,7 @@ export default function HomePage({
                           setIsSustainableDevelopmentESGOpen(false);
                           setIsEthicsCorporateResbosilbilityOpen(false);
                           setIsCorporateCultureValuesOpen(false);
+                          setIsPublicWelfareCommunityOpen(false);
                           // setIsNewsSheetOpen(true);
                           navigate("/news");
                         }}
@@ -747,6 +809,7 @@ export default function HomePage({
                       className="section-cards global-cards"
                       aria-label="Global presence cards"
                     >
+                      {/*
                       <button
                         className="section-card has-media section-card-align-left global-card-bg-gp brand-history-trigger"
                         type="button"
@@ -767,6 +830,7 @@ export default function HomePage({
                         </span>
                         <SectionCardTitle zh="全球布局" en={["Global","Presence"]} />
                       </button>
+                      */}
                       <button
                         className="section-card has-media section-card-align-left global-card-bg-cbr brand-history-trigger"
                         type="button"
@@ -972,6 +1036,28 @@ export default function HomePage({
                           </span>
                         </span>
                         <SectionCardTitle zh="无歧视政策" en={["Non-Discrimination","Policy"]} />
+                      </button>
+                      <button
+                        className="section-card has-media section-card-align-left join-card-bg-rhr brand-history-trigger"
+                        type="button"
+                        onClick={() => {
+                          setIsAtZFTGroupSheetOpen(false);
+                          setIsCareerOpportunitiesDevelopmentSheetOpen(false);
+                          setIsNonDiscriminationPolicySheetOpen(false);
+                          navigate("/recruitment-and-human-resources");
+                        }}
+                      >
+                        <span className="section-card-media" aria-hidden="true">
+                          <span className="section-card-media-inner">
+                            <img
+                              className="section-card-media-image"
+                              src="/cod.webp"
+                              alt=""
+                            />
+                            <span className="section-card-media-overlay" />
+                          </span>
+                        </span>
+                        <SectionCardTitle zh="人事招聘" en={["Recruitment", "& Human Resources"]} />
                       </button>
                     </div>
                   </div>
@@ -1229,6 +1315,13 @@ export default function HomePage({
           navigate("/");
         }}
       />
+      <PublicWelfareCommunity
+        isOpen={isPublicWelfareCommunityOpen}
+        onClose={() => {
+          setIsPublicWelfareCommunityOpen(false);
+          navigate("/");
+        }}
+      />
       <NewsSheet
         isOpen={isNewsSheetOpen}
         onClose={() => {
@@ -1296,6 +1389,13 @@ export default function HomePage({
         isOpen={isNonDiscriminationPolicySheetOpen}
         onClose={() => {
           setIsNonDiscriminationPolicySheetOpen(false);
+          navigate("/");
+        }}
+      />
+      <RecruitmentHumanResources
+        isOpen={isRecruitmentHumanResourcesOpen}
+        onClose={() => {
+          setIsRecruitmentHumanResourcesOpen(false);
           navigate("/");
         }}
       />
