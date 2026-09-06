@@ -29,6 +29,7 @@
 
 .hzg-template__compare {
   margin: 90px var(--hzg-grid-side-margin);
+  margin-left: calc(var(--hzg-grid-side-margin) - 32px);
   margin-bottom: 160px;
   text-align: left;
   font-size: var(--hzg-compare-font-size);
@@ -50,7 +51,7 @@
 
 .hzg-template__content-grid {
   margin-top: 0;
-  margin-left: calc(var(--hzg-grid-side-margin) - 2em);
+  margin-left: calc(var(--hzg-grid-side-margin) - 32px);
   margin-right: var(--hzg-grid-side-margin);
   display: grid;
   grid-template-columns: 1fr;
