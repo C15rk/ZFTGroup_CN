@@ -19,8 +19,12 @@ export default function HistoryOfSeinfel({ isVisible = false }) {
   ];
 
   const bodyParagraphs = [
-    "我们的产品和服务涵盖整个空气过滤系统领域，包括家用、商用及工业空气净化、地面清洁过滤以及汽车过滤。",
-    "我们拥有一支超过100人的专业研发团队，为客户提供多样化的净化解决方案。",
+    [
+      "我们的产品和服务涵盖整个空气过滤系统领域，包括家用、商用及工业空气净化、地面清洁过滤以及汽车过滤。",
+    ],
+    [
+      "我们拥有一支超过100人的专业研发团队，为客户提供多样化的净化解决方案。",
+    ],
   ];
 
   useEffect(() => {
@@ -79,12 +83,24 @@ export default function HistoryOfSeinfel({ isVisible = false }) {
         </div>
 
         <div className="hsf-template__body">
-          {bodyParagraphs.map((paragraph, index) => (
+          {bodyParagraphs.map((paragraph, paragraphIndex) => (
             <div
-              key={`${paragraph}-${index}`}
+              key={`paragraph-${paragraphIndex}`}
               className="hsf-template__paragraph"
             >
-              {paragraph}
+              {paragraph.map((line, lineIndex) => (
+                <div
+                  key={`${line}-${lineIndex}`}
+                  className="hsf-template__line-wrap"
+                >
+                  <div
+                    className="hsf-template__line"
+                    style={{ "--line-index": paragraphIndex + lineIndex }}
+                  >
+                    {line}
+                  </div>
+                </div>
+              ))}
             </div>
           ))}
         </div>

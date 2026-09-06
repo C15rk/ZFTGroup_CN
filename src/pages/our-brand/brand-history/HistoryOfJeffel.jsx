@@ -18,9 +18,11 @@ export default function HistoryOfJeffel({ isVisible = false }) {
   ];
 
   const bodyParagraphs = [
-    "我们为不同行业的水净化需求提供合适高价值的应用解决方案：从需求分析，工",
-    "况分析，方案设计，产品试样，测试评估，技术标准化到安装调试的一整套成熟",
-    "的方案流程，高效解决问题，满足差异显著的客户需求。",
+    [
+      "我们为不同行业的水净化需求提供合适高价值的应用解决方案：从需求分析，工",
+      "况分析，方案设计，产品试样，测试评估，技术标准化到安装调试的一整套成熟",
+      "的方案流程，高效解决问题，满足差异显著的客户需求。",
+    ],
   ];
 
   useEffect(() => {
@@ -71,40 +73,49 @@ export default function HistoryOfJeffel({ isVisible = false }) {
         ))}
       </div>
 
+      <div className="hjf-template__copy-grid">
+        <div className="hjf-template__intro hjf-template__lines hjf-template__lines-no-float is-visible">
+          {introLines.map((line, index) => (
+            <div key={`${line}-${index}`} className="hjf-template__line-wrap">
+              <div
+                className="hjf-template__line"
+                style={{ "--line-index": index }}
+              >
+                {line}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="hjf-template__body hjf-template__lines hjf-template__lines-no-float is-visible">
+          {bodyParagraphs.map((paragraph, paragraphIndex) => (
+            <div
+              key={`paragraph-${paragraphIndex}`}
+              className="hjf-template__paragraph"
+            >
+              {paragraph.map((line, lineIndex) => (
+                <div
+                  key={`${line}-${lineIndex}`}
+                  className="hjf-template__line-wrap"
+                >
+                  <div
+                    className="hjf-template__line"
+                    style={{ "--line-index": paragraphIndex + lineIndex }}
+                  >
+                    {line}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
       <img
         className="hjf-template__info-image"
         src="/hojinfo.webp"
         alt="Jeffel information"
       />
-
-      <div className="hjf-template__intro hjf-template__lines hjf-template__lines-no-float is-visible">
-        {introLines.map((line, index) => (
-          <div key={`${line}-${index}`} className="hjf-template__line-wrap">
-            <div
-              className="hjf-template__line"
-              style={{ "--line-index": index }}
-            >
-              {line}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="hjf-template__body hjf-template__lines hjf-template__lines-no-float is-visible">
-        {bodyParagraphs.map((paragraph, index) => (
-          <div
-            key={`${paragraph}-${index}`}
-            className="hjf-template__paragraph hjf-template__line-wrap"
-          >
-            <div
-              className="hjf-template__line"
-              style={{ "--line-index": index }}
-            >
-              {paragraph}
-            </div>
-          </div>
-        ))}
-      </div>
 
       <section className="hjf-template__chronicle">
         <h3 className="hjf-template__chronicle-title">发展历史</h3>

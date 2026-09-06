@@ -1,6 +1,6 @@
 .hsf-template {
   --hsf-horizontal-gutter: 24px;
-  --hsf-line-height: 1.8;
+  --hsf-line-height: 1.5;
   --hsf-lead-size: 45px;
   --hsf-intro-size: 34px;
   --hsf-body-size: 28px;
@@ -81,7 +81,7 @@
 }
 
 .hsf-template__paragraph + .hsf-template__paragraph {
-  margin-top: 10px;
+  margin-top: calc(var(--hsf-body-size) * 0.3);
 }
 
 .hsf-template__chronicle {
