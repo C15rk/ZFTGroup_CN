@@ -5,22 +5,20 @@ export default function SolutionsContent({ isVisible = false }) {
   const [hasLeadAnimated, setHasLeadAnimated] = useState(false);
 
   const leadLines = [
-    "Relying on the four brands of SEINFEL, JEFFEL, COFON and REFFECO,",
-    "we have mature product systems in the fields of gas filtration, liquid filtration",
-    "and filtration materials, and are applied to home appliances, commercial,",
-    "clean, automotive, municipal and other fields.",
+    "依托歆弗、洁弗、科弗和瑞弗四大品牌，我们在气体",
+    "过滤、液体过滤及过滤材料领域构建了成熟的产品体",
+    "系，广泛应用于小家电、洗地机、扫地机、空气净化",
+    "器、通风系统、汽车过滤、水净化、水处理、内包装",
+    "等商用、家用及工业用领域。",
   ];
 
-  const leftParagraphs = [
-    "We can provide customers with special, environmentally friendly, low-cost filtration, environmentally friendly packaging products and even filter devices and filtration solutions from raw materials such as kapok materials, PP, PTFE, PET, PES;",
-    "We can provide customers with industrial and domestic water purification and filtration solutions from raw materials such as carbon, PP, ecological minerals, RO;",
-    "We can provide customers with integrated solutions for the design and development of special equipment from process to production, as well as molds and non-standard equipment;",
-  ];
-
-  const rightParagraphs = [
-    "We provide customers with a sound enterprise standard system and product testing and evaluation system, and use global standards to provide authoritative measurement and analysis reports on materials and products, and supervise and monitor the products we provide to customers and a series of guarantee services.",
-    "We can provide customers with synchronous design and development personnel on-site services at the customer site to shorten the communication and design problem solving cycle with customers.",
-    "We can provide limited authorized project manager management services, with values: customer first, leadership, innovation and excellence, integrity and ethics.",
+  const whatWeCanDoItems = [
+    "我们可基于木棉材料、PP、PTFE、PET、PES等原材料，为客户提供专用型、环保型、低成本的过滤产品、环保包装产品，甚至过滤装置及整体过滤解决方案。",
+    "我们可基于PTFE、PVDF、PP、RO、活性碳等原材料，为客户提供工业及家用水净化与过滤解决方案。",
+    "我们可在客户现场提供同步设计与开发人员驻场服务，缩短与客户之间的沟通及设计问题解决周期。",
+    "我们为客户提供完善的企业标准体系和产品检测评估体系，采用国际标准对材料和产品出具权威的测量与分析报告，并对所提供的产品进行监督监控及一系列保障服务。",
+    "我们可为客户提供从工艺到生产的专用设备设计与开发一体化解决方案，以及模具和非标设备。",
+    "我们可提供有限授权的项目经理管理服务，秉持“客户至上、引领发展、创新卓越、诚信守正”的价值理念。",
   ];
 
   useEffect(() => {
@@ -77,20 +75,13 @@ export default function SolutionsContent({ isVisible = false }) {
         alt="Solutions info chart"
       />
 
-      <h3 className="ps-solutions-title">What We Can Do</h3>
-
       <div className="ps-solutions-body-grid">
-        <div className="ps-solutions-col">
-          {leftParagraphs.map((paragraph, index) => (
-            <p key={`left-${index}`}>
-              <span className="ps-solutions-dot" />
-              <span>{paragraph}</span>
-            </p>
-          ))}
+        <div className="ps-solutions-title-col">
+          <h3 className="ps-solutions-title">我们能做什么</h3>
         </div>
         <div className="ps-solutions-col">
-          {rightParagraphs.map((paragraph, index) => (
-            <p key={`right-${index}`}>
+          {whatWeCanDoItems.map((paragraph, index) => (
+            <p key={`what-we-can-do-${index}`}>
               <span className="ps-solutions-dot" />
               <span>{paragraph}</span>
             </p>

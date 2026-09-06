@@ -1,7 +1,7 @@
 export default function ProductsContent() {
   const brandCards = [
     {
-      src: "/p-cofon.png",
+      src: "/p-cofon.webp",
       alt: "Cofon brand icon",
       rightCopy:
         "科弗COFON拥有熔喷、PTFE、玻纤、复合、环保包装纸、吸水纸等市场主流材料",
@@ -26,7 +26,7 @@ export default function ProductsContent() {
       ],
     },
     {
-      src: "/p-seinfel.png",
+      src: "/p-seinfel.webp",
       alt: "Seinfel brand icon",
       rightCopy:
         "歆弗SEINFEL传承了朝晖空气过滤产品与技术，包含地面清洁、家用空气净化、商用及工业空气过滤、汽车过滤",
@@ -52,7 +52,7 @@ export default function ProductsContent() {
       ],
     },
     {
-      src: "/p-reffeco.png",
+      src: "/p-reffeco.webp",
       alt: "Reffeco brand icon",
       rightCopy: "环保包装: 专注于替塑内包装，100%可自然降解的环保包装方案",
       rightLink: "https://www.reffeco.com",
@@ -60,7 +60,7 @@ export default function ProductsContent() {
       rows: [],
     },
     {
-      src: "/p-jeffel.png",
+      src: "/p-jeffel.webp",
       alt: "Jeffel brand icon",
       rightCopy: "洁弗JEFFEL专业从事家用净水、商用净水及工业水的过滤解决方案",
       rows: [

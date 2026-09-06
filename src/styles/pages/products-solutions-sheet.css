@@ -65,8 +65,8 @@
 }
 
 .ps-gradient-card-list {
-  --ps-card-gap: 100px;
-  margin: 77px var(--ps-copy-side-margin) 62px;
+  --ps-card-gap: 130px;
+  margin: 100px calc(var(--ps-copy-side-margin) * 0.85) 62px;
   display: grid;
   gap: var(--ps-card-gap);
 }
@@ -89,7 +89,7 @@
   --ps-card-padding: 0px;
   margin: 0;
   min-height: 220px;
-  border-radius: 14px;
+  border-radius: 23px;
   background: linear-gradient(135deg, #2027b7 0%, #3756f4 100%);
   padding: var(--ps-card-padding);
   display: flex;
@@ -121,10 +121,10 @@
   display: flex;
   align-items: center;
   gap: 0;
-  border-bottom: 2px solid #4863ff;
+  border-bottom: 3px solid #4863ff;
   padding-bottom: 8px;
   padding-left: 20px;
-  min-height: 36px;
+  min-height: 64px;
 }
 
 .ps-gradient-card :nth-child(1) > .ps-gradient-row-link :nth-child(4) {
@@ -175,7 +175,7 @@
   width: 100%;
   max-width: none;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 400;
   line-height: 1.3;
   text-align: left;
@@ -193,7 +193,7 @@
   position: relative;
   display: flex;
   align-items: stretch;
-  min-height: 120px;
+  min-height: 190px;
   padding-bottom: 0;
 }
 
@@ -203,17 +203,19 @@
   left: -18px;
   right: -18px;
   bottom: 0;
-  height: 5px;
+  height: 10px;
   background: #ffffff;
 }
 
 .ps-gradient-col-left {
   position: relative;
   display: flex;
+  flex: 0 0 280px;
   align-self: stretch;
   align-items: center;
+  justify-content: center;
   padding-right: 16px;
-  margin-right: 20px;
+  margin-right: 32px;
 }
 
 .ps-gradient-col-left::after {
@@ -222,7 +224,7 @@
   right: 0;
   top: calc(var(--ps-card-padding) * -1);
   bottom: 0;
-  width: 5px;
+  width: 10px;
   background: #ffffff;
 }
 
@@ -234,6 +236,7 @@
   align-self: stretch;
   justify-content: center;
   align-items: flex-start;
+  margin-right: 100px;
 }
 
 .ps-gradient-col-right--seinfel {
@@ -246,7 +249,7 @@
   width: 100%;
   max-width: none;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 400;
   line-height: 1.35;
   text-align: left;
@@ -328,7 +331,7 @@
   width: auto;
   max-width: 150px;
   height: auto;
-  padding: 8px 8px 8px 20px;
+  padding: 8px;
   object-fit: contain;
 }
 
@@ -346,25 +349,29 @@
 }
 
 .ps-solutions-lead {
-  margin: 77px var(--ps-horizontal-gutter) 62px;
-  text-align: center;
-  font-size: 32px;
-  line-height: 1.4;
+  margin: 90px var(--ps-text-side-margin) 50px;
+  margin-left: calc(var(--ps-text-side-margin) - 32px);
+  text-align: left;
+  font-size: 45px;
+  line-height: 1.5;
   font-family: "Alibaba PuHuiTi 3.0", "Arial", sans-serif;
-  font-weight: 100;
+  font-weight: 450;
   color: #000000;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .ps-solutions-info {
   display: block;
-  width: calc(100% - (var(--ps-copy-side-margin) * 2));
+  width: calc((100% - (var(--ps-copy-side-margin) * 2)) * 0.85);
   margin: 0 auto;
   max-height: 620px;
   object-fit: contain;
 }
 
 .ps-solutions-title {
-  margin: 62px var(--ps-text-side-margin) 32px;
+  margin: 0;
   text-align: left;
   font-size: 36px;
   font-weight: 400;
@@ -374,15 +381,21 @@
 }
 
 .ps-solutions-body-grid {
-  margin: 0 var(--ps-text-side-margin) 62px;
+  margin: 120px var(--ps-text-side-margin) 62px;
+  margin-left: calc(var(--ps-text-side-margin) - 32px);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.5fr 1.1fr;
   gap: 60px;
+}
+
+.ps-solutions-title-col {
+  display: flex;
+  align-items: flex-start;
 }
 
 .ps-solutions-col {
   display: grid;
-  gap: 18px;
+  gap: 50px;
 }
 
 .ps-sheet .ps-solutions-col p {
@@ -393,16 +406,16 @@
   align-items: flex-start;
   gap: 10px;
   text-align: left;
-  font-size: 24px;
-  font-weight: 100;
+  font-size: 28px;
+  font-weight: 300;
   line-height: 1.5;
   color: #000000;
 }
 
 .ps-solutions-dot {
-  width: 12px;
-  height: 12px;
-  flex: 0 0 12px;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
   border-radius: 50%;
   background: #000000;
   display: inline-block;
@@ -422,6 +435,10 @@
 .ps-solutions-lines.is-visible .ps-solutions-line {
   animation: ps-solutions-line-fade 3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: calc(var(--line-index) * 300ms);
+}
+
+.ps-sheet > .footer {
+  margin-top: 210px;
 }
 
 @keyframes ps-solutions-line-fade {
