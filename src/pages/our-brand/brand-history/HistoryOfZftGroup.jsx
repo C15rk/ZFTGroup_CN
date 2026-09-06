@@ -8,19 +8,23 @@ export default function HistoryOfZftGroup({ isVisible = false }) {
   const historyLines = [
     // "ZFT Group was founded in 1993. We started with air filtration. After more than 30 years of development, we have formed four major businesses, air filtration, water filtration, filter material research and development, production and integrated application and a range of eco friendly bio-degradable packaging materials.",
   ];
-  const detailLinesIntro = ["We service multiple industries worldwide."];
+  const detailLinesIntro = ["我们为全球多个行业提供服务"];
   const detailLinesIndustries = [
-    "Cofon (filter materials), Seinfel (air filtration), Jeffel (water filtration), Reffeco (environmentally friendly packaging material), covering filter materials, vacuum cleaner filter accessories, air purification systems, automotive filters, household and commercial water purification systems, industrial water and air treatment systems, environmentally friendly packaging.",
+    "科弗-COFON（材料）、歆弗-SEINFEL（空气过滤）、洁弗-JEFFEL（水",
+    "过滤）、REFFECO（环保包装），业务涵盖材料、吸尘器配件、空气净",
+    "化系统、汽车滤清器、家用及商用净水系统、工业水与空气处理系统，",
+    "以及环保包装。",
   ];
   const detailLinesPartTwo = [
-    "Today, our customers are spread across more than 40 countries in the world and our commitment to continued product development continues to open up more new markets for the brands of ZFT Group.",
+    "如今，我们的客户遍布全球40多个国家，我们对持续产品研发的承诺不",
+    "断为朝晖股份旗下品牌开拓更多新市场。",
   ];
   const compareLines = [
-    "ZFT Group was founded in 1993. We started with air filtration.",
-    "After more than 30 years of development, we have formed four major businesses,",
-    "air filtration, water filtration, filter material research and development,",
-    "production and integrated application and a range of eco friendly",
-    "bio-degradable packaging materials.",
+    "朝晖股份成立于1993年，起初专注于空气过滤",
+    "领域。经过30多年的发展，我们已形成四大业",
+    "务板块：空气过滤、水过滤、滤材研发生产及",
+    "综合应用，以及一系列环保可降解包装材料、",
+    "产品及包装方案。",
   ];
 
   useEffect(() => {
@@ -159,12 +163,13 @@ export default function HistoryOfZftGroup({ isVisible = false }) {
               </div>
             ))}
           </div>
+          <div className="hzg-template__image-gap" />
+          <img
+            className="hzg-template__side-image"
+            src="/webp/zhls.webp"
+            alt="ZFT Group industries"
+          />
         </div>
-        <img
-          className="hzg-template__side-image"
-          src="/hzgpic.webp?v=20260225"
-          alt="ZFT Group industries"
-        />
       </div>
     </div>
   );

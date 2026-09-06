@@ -1,12 +1,12 @@
 .hzg-template {
   --hzg-horizontal-gutter: 24px;
   --hzg-top-spacing: 32px;
-  --hzg-compare-font-size: 32px;
-  --hzg-compare-line-height: 1.4;
-  --hzg-left-column-font-size: 28px;
-  --hzg-body-font-size: 24px;
-  --hzg-copy-line-height: 1.6;
-  --hzg-gap-size: 18px;
+  --hzg-compare-font-size: 45px;
+  --hzg-compare-line-height: 1.5;
+  --hzg-left-column-font-size: 34px;
+  --hzg-body-font-size: 28px;
+  --hzg-copy-line-height: 1.8;
+  --hzg-gap-size: 10px;
   --hzg-grid-gap: 20px;
   --hzg-grid-side-margin: clamp(24px, 6.40625vw, 123px);
   --hzg-hero-max-height: 520px;
@@ -28,13 +28,13 @@
 }
 
 .hzg-template__compare {
-  margin: 77px var(--hzg-horizontal-gutter);
-  margin-bottom: 62px;
-  text-align: center;
+  margin: 90px var(--hzg-grid-side-margin);
+  margin-bottom: 160px;
+  text-align: left;
   font-size: var(--hzg-compare-font-size);
   line-height: var(--hzg-compare-line-height);
   font-family: var(--hzg-font-family);
-  font-weight: 100;
+  font-weight: 450;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,10 +50,10 @@
 
 .hzg-template__content-grid {
   margin-top: 0;
-  margin-left: var(--hzg-grid-side-margin);
+  margin-left: calc(var(--hzg-grid-side-margin) - 2em);
   margin-right: var(--hzg-grid-side-margin);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: var(--hzg-grid-gap);
   align-items: start;
 }
@@ -72,7 +72,7 @@
 .hzg-template__body {
   font-size: var(--hzg-body-font-size);
   font-family: var(--hzg-font-family);
-  font-weight: 100;
+  font-weight: 300;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -88,11 +88,18 @@
   height: var(--hzg-gap-size);
 }
 
+.hzg-template__image-gap {
+  height: 160px;
+}
+
 .hzg-template__side-image {
-  width: 100%;
+  justify-self: start;
+  width: 150%;
   height: auto;
-  max-height: var(--hzg-side-image-max-height);
+  max-height: calc(var(--hzg-side-image-max-height) * 1.36);
+  margin-bottom: 160px;
   object-fit: contain;
+  object-position: left center;
 }
 
 .hzg-template__lines .hzg-template__line-wrap {

@@ -16,6 +16,12 @@ export default function BrandHistorySheet({ isOpen, onClose }) {
     'History of JEFFEL',
     'History of COFON',
   ]
+  const historyTagLabels = {
+    'History of ZFT Group': '朝晖历史',
+    'History of SEINFEL': '歆弗历史',
+    'History of JEFFEL': '洁弗历史',
+    'History of COFON': '科弗历史',
+  }
   const tagContentComponents = {
     'History of ZFT Group': HistoryOfZftGroup,
     'History of SEINFEL': HistoryOfSeinfel,
@@ -55,7 +61,13 @@ export default function BrandHistorySheet({ isOpen, onClose }) {
           aria-hidden={!isOpen}
         >
           <div className="bottom-sheet-header bh-sheet-header">
-            <h2 className="bh-sheet-title">BRAND HISTORY</h2>
+            <h2 className="bh-sheet-title bh-sheet-title-bilingual">
+              <span className="bh-sheet-title-cn">品牌历史</span>
+              <span className="bh-sheet-title-en" aria-label="Brand History">
+                <span className="bh-sheet-title-line">Brand</span>
+                <span className="bh-sheet-title-line">History</span>
+              </span>
+            </h2>
             <button
               className="bottom-sheet-close bh-sheet-close"
               type="button"
@@ -73,7 +85,7 @@ export default function BrandHistorySheet({ isOpen, onClose }) {
                 type="button"
                 onClick={() => setActiveTag(tag)}
               >
-                {tag}
+                {historyTagLabels[tag]}
               </button>
             ))}
           </div>
