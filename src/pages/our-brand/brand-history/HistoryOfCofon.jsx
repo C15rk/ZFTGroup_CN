@@ -8,18 +8,26 @@ export default function HistoryOfCofon({ isVisible = false }) {
   const [hasIntroAnimated, setHasIntroAnimated] = useState(false);
   const [hasBodyAnimated, setHasBodyAnimated] = useState(false);
 
-  const leadLines = [
-    '"COFON" is a professional brand of environmental management materials.',
-  ];
+  const leadLines = ["科弗COFON 是一个专业的环境治理材料品牌。"];
 
   const introLines = [
-    "It originated from Tongxiang Jianmin Filter Material Co., Ltd., which has 30 years of experience in material manufacturing and specializes in research and development, industrial manufacturing, engineering application and market promotion of filtration, separation and purification materials.",
+    "科弗源自具有三十年材料制造",
+    "经验专业从事过滤、分离、净",
+    "化材料研究开发、产业化制",
+    "造、工程应用及市场推广的桐",
+    "乡市健民过滤材料有限公司。",
   ];
 
   const bodyParagraphs = [
-    "Its products include electret melt-blown for air filtration, high-efficiency glass fiber paper special filter paper, PTFE (polytetrafluoroethylene) air filter membrane, PP (polypropylene) hollow fiber microfiltration membrane, PVDF (polyvinylidene fluoride) homogeneous ultrafiltration membrane, PVDF composite membrane, PES (polyethersulfone) homogeneous ultrafiltration membrane and other filter materials. Products have been sold to Europe, North America, Australia, Japan, South Korea, Taiwan and other regions.",
-    "In the field of air filtration, COFON has an experimental center listed by the Filtration and Separation Technology Professional Committee (CFS) of the China Technology Market Association, and has established close cooperative relations with universities such as Hangzhou Dianzi University and South China University of Technology. It is in a leading position in China in the research of new materials and testing and evaluation levels.",
-    'In the field of water treatment, relying on the "Membrane and Water Treatment Technology" Engineering Research Center of the Ministry of Education of Zhejiang University as its technical support, it is in a leading position in China in the research and development of membrane materials such as microfiltration, ultrafiltration, nanofiltration, and reverse osmosis.',
+    "产品包括空气过滤用驻极熔喷、高效玻璃纤维纸特种过滤纸、PTFE(聚四氣乙烯)",
+    "空气过滤膜、PP(聚丙烯)中空纤维微滤膜、PVDF(聚偏氟乙烯)均质超滤膜、PVDF",
+    "复合膜、PES(聚醚砜)均质超滤膜等各种过滤材料产品已销售至欧洲、北美、澳",
+    "洲、日本、韩国、台湾等地区。",
+    "在空气过滤领域，科弗拥有中国技术市场协会过滤与分离技术专业委员会(CFS)",
+    "挂牌的实验中心，与杭州电子科技大学、华南理工大学等高等院校建立了紧密合",
+    "作关系，在研究新材料及测试评估水平上处于国内领先地位。",
+    "在水处理领域，以浙江大学“膜与水处理技术”教育部工程研究中心为技术依",
+    "托，在微滤、超滤、纳滤、反渗透等膜材料的研发上处于国内领先地位。",
   ];
 
   useEffect(() => {
@@ -142,7 +150,7 @@ export default function HistoryOfCofon({ isVisible = false }) {
       </div>
 
       <section className="hcf-template__chronicle">
-        <h3 className="hcf-template__chronicle-title">Development History</h3>
+        <h3 className="hcf-template__chronicle-title">发展历史</h3>
         <img
           className="hcf-template__chronicle-image"
           src="/hocchronicle.webp"

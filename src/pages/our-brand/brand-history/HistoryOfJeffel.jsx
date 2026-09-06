@@ -5,16 +5,22 @@ export default function HistoryOfJeffel({ isVisible = false }) {
   const [hasLeadAnimated, setHasLeadAnimated] = useState(false);
 
   const leadLines = [
-    "Founded in 1998, the predecessor was Kaihua Membrane Technology Co., Ltd.,",
-    "which was established by Singapore Kaifa.",
+    "洁弗Jeﬀel成立于1998年，前身是由新加坡凯华膜",
+    "注资成立凯华膜技术有限公司。",
   ];
 
   const introLines = [
-    "After more than 20 years, Jeffel has grown rapidly from a single membrane technology professional company to a technology product supplier that provides comprehensive solutions for water, reclaimed water reuse, wastewater treatment, and water purification.",
+    "历经20余年，洁弗由单一的",
+    "膜技术专业公司快速成长为：",
+    "提供给水、中水回用、废水处",
+    "理、水净化的全方位解决方案",
+    "的技术产品供应商。",
   ];
 
   const bodyParagraphs = [
-    "We provide suitable high-value application solutions for water purification needs in different industries: a complete set of mature solution processes from demand analysis, operating condition analysis, solution design, product samples, test evaluation, technical standardization to installation and commissioning, efficiently solving problems and meeting significantly different customer needs.",
+    "我们为不同行业的水净化需求提供合适高价值的应用解决方案：从需求分析，工",
+    "况分析，方案设计，产品试样，测试评估，技术标准化到安装调试的一整套成熟",
+    "的方案流程，高效解决问题，满足差异显著的客户需求。",
   ];
 
   useEffect(() => {
@@ -101,7 +107,7 @@ export default function HistoryOfJeffel({ isVisible = false }) {
       </div>
 
       <section className="hjf-template__chronicle">
-        <h3 className="hjf-template__chronicle-title">Development History</h3>
+        <h3 className="hjf-template__chronicle-title">发展历史</h3>
         <img
           className="hjf-template__chronicle-image"
           src="/hojchronicle.webp"

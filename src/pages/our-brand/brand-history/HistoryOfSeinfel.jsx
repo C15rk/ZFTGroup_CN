@@ -5,17 +5,22 @@ export default function HistoryOfSeinfel({ isVisible = false }) {
   const [hasLeadAnimated, setHasLeadAnimated] = useState(false);
 
   const leadLines = [
-    "Seinfel is at the center of ZFT Group’s DNA for more than 30 years of technology",
-    "and is committed to the development and manufacture of air filtration expertise.",
+    "三十多年来，歆弗Seinfel始终是朝晖股份技术基因",
+    "的核心，并致力于空气过滤专业领域的研发与制造。",
   ];
 
   const introLines = [
-    "As an air filter brand under ZFT Group, we have all of ZFT’s significant experience in the filtration industry, and have the ability to independently develop, manufacture, and test air filter materials, manufacture and test air filter devices, and customize air filter system solutions.",
+    "作为朝晖股份旗下的专业空气",
+    "过滤品牌，我们不仅深得集团",
+    "三十余载的行业精髓，更拥有",
+    "从滤材研发、设备制造到系统",
+    "定制的全链路自主权与检测实",
+    "力。",
   ];
 
   const bodyParagraphs = [
-    "Our products and services cover the entire range of air filter systems, including household, commercial and industrial air purification, floor cleaning filtration, automotive filtration, and environmentally friendly packaging products.",
-    "We have a team of more than 100 professional R&D engineers providing customers with a wide range of purification solutions.",
+    "我们的产品和服务涵盖整个空气过滤系统领域，包括家用、商用及工业空气净化、地面清洁过滤以及汽车过滤。",
+    "我们拥有一支超过100人的专业研发团队，为客户提供多样化的净化解决方案。",
   ];
 
   useEffect(() => {
@@ -66,27 +71,34 @@ export default function HistoryOfSeinfel({ isVisible = false }) {
         ))}
       </div>
 
+      <div className="hsf-template__copy-grid">
+        <div className="hsf-template__intro">
+          {introLines.map((line, index) => (
+            <div key={`${line}-${index}`}>{line}</div>
+          ))}
+        </div>
+
+        <div className="hsf-template__body">
+          {bodyParagraphs.map((paragraph, index) => (
+            <div
+              key={`${paragraph}-${index}`}
+              className="hsf-template__paragraph"
+            >
+              {paragraph}
+            </div>
+          ))}
+        </div>
+      </div>
+
       <img
         className="hsf-template__info-image"
         src="/hosinfo.webp?v=20260225"
         alt="Seinfel information"
       />
 
-      <div className="hsf-template__intro">{introLines[0]}</div>
-
-      <div className="hsf-template__body">
-        {bodyParagraphs.map((paragraph, index) => (
-          <div
-            key={`${paragraph}-${index}`}
-            className="hsf-template__paragraph"
-          >
-            {paragraph}
-          </div>
-        ))}
-      </div>
-
       <section className="hsf-template__chronicle">
-        <h3 className="hsf-template__chronicle-title">Development History</h3>
+        <h3 className="hsf-template__chronicle-title">发展历史</h3>
+
         <img
           className="hsf-template__chronicle-image"
           src="/hoschronicle.webp"
