@@ -17,9 +17,9 @@
 }
 
 .section-cards {
-  --section-card-width: 380px;
-  margin-top: 16px;
-  margin-bottom: 10px;
+  --section-card-width: 456px;
+  margin-top: 38px;
+  margin-bottom: 0px;
   display: flex;
   width: 100%;
   overflow-x: auto;

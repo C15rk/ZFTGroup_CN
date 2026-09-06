@@ -27,6 +27,7 @@ import { siteSections } from "../../data/sections.js";
 // "fixed-locked"  -> sheet top stays fixed, only inner content scrolls (legacy behavior)
 // const POPUP_SCROLL_MODE = "dynamic-cover";
 const POPUP_SCROLL_MODE = "fixed-locked";
+const COLLAPSIBLE_HEIGHT_BUFFER = 80;
 
 const DEFAULT_DOCUMENT_TITLE = "ZFT Group";
 
@@ -204,7 +205,8 @@ export default function HomePage({
     Object.entries(collapsibleInnerRefs.current).forEach(
       ([sectionKey, node]) => {
         if (node) {
-          nextHeights[sectionKey] = node.scrollHeight;
+          nextHeights[sectionKey] =
+            node.scrollHeight + COLLAPSIBLE_HEIGHT_BUFFER;
         }
       },
     );
@@ -241,10 +243,23 @@ export default function HomePage({
     };
 
     window.addEventListener("resize", handleResize);
+    const resizeObservers = [];
+
+    if ("ResizeObserver" in window) {
+      Object.values(collapsibleInnerRefs.current).forEach((node) => {
+        if (!node) return;
+        const observer = new ResizeObserver(() => {
+          updateSectionContentHeights();
+        });
+        observer.observe(node);
+        resizeObservers.push(observer);
+      });
+    }
 
     return () => {
       cancelAnimationFrame(rafId);
       window.removeEventListener("resize", handleResize);
+      resizeObservers.forEach((observer) => observer.disconnect());
     };
   }, [activeSection]);
 

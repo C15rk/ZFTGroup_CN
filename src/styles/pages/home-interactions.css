@@ -21,7 +21,7 @@
   will-change: transform;
 }
 
-.section-toggle-button[aria-expanded='true'] .section-toggle-icon {
+.section-toggle-button[aria-expanded="true"] .section-toggle-icon {
   transform: rotate(0deg);
 }
 
@@ -47,5 +47,5 @@
 .brand-collapsible.is-open {
   opacity: 1;
   transform: translateY(0);
-  padding-bottom: 5px;
+  padding-bottom: 1px;
 }

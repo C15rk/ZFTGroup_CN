@@ -20,8 +20,8 @@
 }
 
 .interactive-link {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 40px;
 }
 
 .interactive-link .section-toggle-button {
@@ -74,14 +74,14 @@
 
 .content-description {
   display: block;
-  margin-top: 17px;
+  margin-top: 32px;
   font-family: "Alibaba PuHuiTi 3.0";
   font-size: 24px;
   font-weight: 300;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.1;
+  line-height: 1.5;
   text-transform: none;
   color: var(--color-text);
   white-space: pre-line;
