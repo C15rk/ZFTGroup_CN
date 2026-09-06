@@ -1131,7 +1131,7 @@ export default function HomePage({
                 <div className="information-top">
                   <img
                     className="information-logo"
-                    src="/logo-large.png"
+                    src="/webp/logo1.webp"
                     alt="ZFT Group large logo"
                   />
                 </div>
@@ -1208,50 +1208,31 @@ export default function HomePage({
                       </div>
                     </div>
                     <div className="information-left-bottom">
-                      <div className="qr-row">
+                      <div className="qr-image-row">
                         <img
-                          className="qr-image"
-                          src="/LinkedIn.png"
-                          alt="LinkedIn QR code"
+                          className="qr-composite-image"
+                          src="/webp/wx.webp"
+                          alt="WeChat QR code"
                         />
-                        <div className="qr-info">
-                          <img
-                            className="social-logo"
-                            src="/LinkedIn-logo.png"
-                            alt="LinkedIn logo"
-                          />
-                          <p>
-                            Scan the QR code
-                            <br />
-                            To view more job opportunities
-                          </p>
-                        </div>
+                        <img
+                          className="qr-composite-image"
+                          src="/webp/wxv.webp"
+                          alt="WeChat video QR code"
+                        />
                       </div>
-                      <div className="qr-row">
+                      <div className="qr-image-row qr-image-row-single">
                         <img
-                          className="qr-image"
-                          src="/youtube.png"
-                          alt="YouTube QR code"
+                          className="qr-composite-image"
+                          src="/webp/dy.webp"
+                          alt="Douyin QR code"
                         />
-                        <div className="qr-info">
-                          <img
-                            className="social-logo"
-                            src="/youtube-logo.png"
-                            alt="YouTube logo"
-                          />
-                          <p>
-                            Scan the QR code to
-                            <br />
-                            view more content on YouTube
-                          </p>
-                        </div>
                       </div>
                     </div>
                   </div>
                   <div className="information-content-right">
                     <img
                       className="information-map"
-                      src="/map.webp"
+                      src="/webp/map.webp"
                       alt="Global map"
                     />
                   </div>
