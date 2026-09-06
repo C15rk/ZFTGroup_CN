@@ -6,6 +6,10 @@ import SolutionsContent from "./SolutionsContent.jsx";
 export default function ProductsSolutionsSheet({ isOpen, onClose }) {
   const [activeTag, setActiveTag] = useState("Products");
   const sheetTags = ["Products", "Solutions"];
+  const sheetTagLabels = {
+    Products: "产品-Products",
+    Solutions: "解决方案-Solutions",
+  };
   const tagContentComponents = {
     Products: ProductsContent,
     Solutions: SolutionsContent,
@@ -36,9 +40,15 @@ export default function ProductsSolutionsSheet({ isOpen, onClose }) {
         aria-hidden={!isOpen}
       >
         <div className="bottom-sheet-header ps-sheet-header">
-          <h2 className="ps-sheet-title">
-            <span className="ps-sheet-title-line">PRODUCTS</span>
-            <span className="ps-sheet-title-line">& SOLUTIONS</span>
+          <h2 className="ps-sheet-title ps-sheet-title-bilingual">
+            <span className="ps-sheet-title-cn">产品与解决方案</span>
+            <span
+              className="ps-sheet-title-en"
+              aria-label="Products & Solutions"
+            >
+              <span className="ps-sheet-title-line">Products</span>
+              <span className="ps-sheet-title-line">& Solutions</span>
+            </span>
           </h2>
           <button
             className="bottom-sheet-close ps-sheet-close"
@@ -50,7 +60,7 @@ export default function ProductsSolutionsSheet({ isOpen, onClose }) {
           </button>
         </div>
         <div
-          className="history-tags"
+          className="history-tags ps-history-tags"
           role="tablist"
           aria-label="Products and solutions tabs"
         >
@@ -61,7 +71,7 @@ export default function ProductsSolutionsSheet({ isOpen, onClose }) {
               type="button"
               onClick={() => setActiveTag(tag)}
             >
-              {tag}
+              {sheetTagLabels[tag]}
             </button>
           ))}
         </div>

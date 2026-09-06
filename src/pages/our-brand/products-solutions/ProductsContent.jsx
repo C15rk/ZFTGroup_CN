@@ -4,23 +4,23 @@ export default function ProductsContent() {
       src: "/p-cofon.png",
       alt: "Cofon brand icon",
       rightCopy:
-        "COFON produces melt-blown, PTFE, glass fiber, composite and other mainstream materials in the filtration industry.",
+        "科弗COFON拥有熔喷、PTFE、玻纤、复合、环保包装纸、吸水纸等市场主流材料",
       rows: [
         {
-          label: "Meltblown Materials:",
+          label: "熔喷材料:",
           url: "https://www.cofonmedia.com/meltblown/",
           arrow: true,
         },
         {
-          label: "PTFE Materials:",
+          label: "PTFE材料:",
           url: "https://www.cofonmedia.com/ptfe-membrane/",
         },
         {
-          label: "Glass Fiber Materials:",
+          label: "玻纤材料:",
           url: "https://www.cofonmedia.com/glassfiber/",
         },
         {
-          label: "Composite Materials:",
+          label: "环保包装纸:",
           url: "https://www.cofonmedia.com/composite-material/",
         },
       ],
@@ -29,23 +29,23 @@ export default function ProductsContent() {
       src: "/p-seinfel.png",
       alt: "Seinfel brand icon",
       rightCopy:
-        "SEINFEL inherits ZFT Group's air filtration products and technologies, including floor cleaning, household air purification, commercial and industrial air filtration, and automotive filtration.",
+        "歆弗SEINFEL传承了朝晖空气过滤产品与技术，包含地面清洁、家用空气净化、商用及工业空气过滤、汽车过滤",
       rows: [
         {
-          label: "Floor Care:",
+          label: "地面清洁:",
           url: "https://www.seinfel.com/PRODUCTS/FloorCare/Paper",
           arrow: true,
         },
         {
-          label: "Air Purification:",
+          label: "家用空气净化:",
           url: "https://www.seinfel.com/PRODUCTS/AirPuri/Dust",
         },
         {
-          label: "Commercial And Industrial Air Filtration:",
+          label: "商用及工业空气过滤:",
           url: "https://www.seinfel.com/PRODUCTS/Commercial/pre",
         },
         {
-          label: "Automotive Filtration:",
+          label: "汽车过滤:",
           url: "https://www.seinfel.com.cn/PRODUCTS/Automotive/Product",
           arrow: true,
         },
@@ -54,7 +54,7 @@ export default function ProductsContent() {
     {
       src: "/p-reffeco.png",
       alt: "Reffeco brand icon",
-      rightCopy: "Eco-friendly Packaging Bag:",
+      rightCopy: "环保包装: 专注于替塑内包装，100%可自然降解的环保包装方案",
       rightLink: "https://www.reffeco.com",
       rightLinkWithArrow: true,
       rows: [],
@@ -62,16 +62,15 @@ export default function ProductsContent() {
     {
       src: "/p-jeffel.png",
       alt: "Jeffel brand icon",
-      rightCopy:
-        "JEFFEL specializes in filtration solutions for household, commercial,\nand industrial water.",
+      rightCopy: "洁弗JEFFEL专业从事家用净水、商用净水及工业水的过滤解决方案",
       rows: [
         {
-          label: "Household Water Purification:",
+          label: "家用净水:",
           url: "http://www.jeffelcn.com/product/cpfle744/",
           arrow: true,
         },
         {
-          label: "Industrial Water:",
+          label: "工业净水:",
           url: "http://www.jeffelcn.com/product/cpfly3ba/",
         },
       ],

@@ -2,25 +2,57 @@
   --ps-horizontal-gutter: 24px;
   --ps-copy-side-margin: 123px;
   --ps-text-side-margin: clamp(24px, 6.40625vw, 123px);
-  padding-top: 44px;
+  padding-top: 66px;
 }
 
 .ps-sheet-header {
   align-items: flex-start;
-  padding-bottom: 18px;
+  padding-bottom: 52px;
 }
 
 .ps-sheet-title {
   text-align: left;
+  line-height: 0.9;
+}
+
+.ps-sheet-title-bilingual {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.22em;
+  font-weight: 300;
+  text-transform: none;
+}
+
+.ps-sheet-title-cn {
+  display: block;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.ps-sheet-title-en {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 1em;
+  font-size: 0.46em;
+  font-weight: 300;
+  line-height: 0.92;
 }
 
 .ps-sheet-title-line {
   display: block;
-  line-height: 0.9;
 }
 
 .ps-sheet-close {
   margin-top: 7px;
+}
+
+.ps-history-tags {
+  margin-top: 0;
+}
+
+.ps-history-tags .history-tag {
+  font-weight: 300;
 }
 
 .ps-sheet-hero-image {
