@@ -2,7 +2,9 @@
   --investors-horizontal-gutter: 24px;
   --investors-copy-side-margin: 123px;
   --investors-text-side-margin: clamp(24px, 6.40625vw, 123px);
-  --investors-grid-gap: 60px;
+  --investors-grid-gap: 20px;
+  --investors-copy-font-size: 28px;
+  --investors-line-height: 1.7;
   --investors-font-family: "Alibaba PuHuiTi 3.0", "Arial", sans-serif;
   padding-top: 44px;
   display: flex;
@@ -16,11 +18,35 @@
 
 .investors-sheet-title {
   text-align: left;
+  line-height: 0.9;
+}
+
+.investors-sheet-title-bilingual {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.22em;
+  font-weight: 300;
+  text-transform: none;
+}
+
+.investors-sheet-title-cn {
+  display: block;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.investors-sheet-title-en {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 1em;
+  font-size: 0.46em;
+  font-weight: 300;
+  line-height: 0.92;
 }
 
 .investors-sheet-title-line {
   display: block;
-  line-height: 0.9;
 }
 
 .investors-sheet-close {
@@ -33,64 +59,87 @@
 }
 
 .investors-sheet > .footer {
-  margin-top: auto;
+  margin-top: 160px;
 }
 
 .investors-hero-image {
   display: block;
   width: calc(100% + (var(--investors-horizontal-gutter) * 2));
   margin: 0 0 0 calc(var(--investors-horizontal-gutter) * -1);
-  /* max-height: 1000px;
-  object-fit: contain; */
   height: auto;
+  max-height: none;
+  object-fit: contain;
 }
 
 .investors-lead {
-  margin: 77px var(--investors-horizontal-gutter) 62px;
-  text-align: center;
-  font-size: 32px;
-  line-height: 1.4;
+  margin: 90px var(--investors-text-side-margin) 120px;
+  margin-left: calc(var(--investors-text-side-margin) - 32px);
+  text-align: left;
+  font-size: 45px;
+  line-height: 1.5;
   font-family: var(--investors-font-family);
-  font-weight: 100;
+  font-weight: 450;
   color: #000000;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .investors-body-grid {
   margin: 0 var(--investors-copy-side-margin) 62px;
+  margin-left: calc(var(--investors-text-side-margin) - 32px);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.58fr 1.2fr;
   gap: var(--investors-grid-gap);
   align-items: start;
 }
 
 .investors-body-left {
-  display: grid;
-  gap: 18px;
-  margin-left: calc(
-    var(--investors-text-side-margin) - var(--investors-copy-side-margin)
-  );
+  margin-left: 0;
 }
 
 .investors-body-right {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-self: end;
   width: 100%;
 }
 
-.investors-sheet .investors-body-left p {
+.investors-sheet .investors-paragraph {
   margin: 0;
   width: 100%;
   max-width: none;
   text-align: left;
-  font-size: 24px;
-  font-weight: 100;
-  line-height: 1.5;
+  font-size: var(--investors-copy-font-size);
+  font-weight: 300;
+  line-height: var(--investors-line-height);
+  font-family: var(--investors-font-family);
   color: #000000;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.investors-paragraph + .investors-paragraph {
+  margin-top: calc(var(--investors-copy-font-size) * 0.8);
+}
+
+.investors-paragraph > div {
+  text-align: justify;
+  text-align-last: justify;
+}
+
+.investors-paragraph > .investors-line-no-justify {
+  text-align: left;
+  text-align-last: left;
 }
 
 .investors-side-image {
   display: block;
   width: calc(
-    100% + var(--investors-copy-side-margin) +
+    95% + var(--investors-copy-side-margin) +
       var(--investors-horizontal-gutter)
   );
   margin-right: calc(
@@ -101,6 +150,11 @@
   height: auto;
   max-height: none;
   object-fit: contain;
+  transform: translateY(4px);
+}
+
+.investors-side-image + .investors-side-image {
+  margin-top: calc(var(--investors-copy-font-size) * 0.8);
 }
 
 .investors-lines .investors-line-wrap {
@@ -157,7 +211,7 @@
     margin-right: calc(var(--investors-horizontal-gutter) * -1);
   }
 
-  .investors-sheet .investors-body-left p {
+  .investors-sheet .investors-paragraph {
     font-size: 14px;
   }
 }

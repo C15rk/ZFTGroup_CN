@@ -6,12 +6,19 @@ export default function CollaborationOpportunitiesSheet({ isOpen, onClose }) {
   const [hasLeadAnimated, setHasLeadAnimated] = useState(false);
 
   const leadLines = [
-    "We actively seek opportunities to collaborate with parties who share our core",
-    "values and high standards.",
+    "我们积极寻求与理念相同、标准一致的合作伙",
+    "伴开展合作。",
   ];
 
   const leftParagraphs = [
-    "Working with industry, university and research institutes provides development opportunities with our business partners, scientific research and industry’s associations& technology partners which advances accelerated developments of innovative products & solutions.",
+    [
+      "我们积极寻找和把握各方合作机会。",
+      "无论是与商业伙伴、科研机构的产学",
+      "研合作，还是与行业协会的交流合",
+      "作，我们都能够迅速响应，充分利用",
+      "这些机会推动企业的技术创新和市场",
+      "拓展。",
+    ],
   ];
 
   useEffect(() => {
@@ -55,9 +62,15 @@ export default function CollaborationOpportunitiesSheet({ isOpen, onClose }) {
         aria-hidden={!isOpen}
       >
         <div className="bottom-sheet-header co-sheet-header">
-          <h2 className="co-sheet-title">
-            <span className="co-sheet-title-line">COLLABORATION</span>
-            <span className="co-sheet-title-line">OPPORTUNITIES</span>
+          <h2 className="co-sheet-title co-sheet-title-bilingual">
+            <span className="co-sheet-title-cn">合作机会</span>
+            <span
+              className="co-sheet-title-en"
+              aria-label="Collaboration Opportunities"
+            >
+              <span className="co-sheet-title-line">Collaboration</span>
+              <span className="co-sheet-title-line">Opportunities</span>
+            </span>
           </h2>
           <button
             className="bottom-sheet-close co-sheet-close"
@@ -93,16 +106,35 @@ export default function CollaborationOpportunitiesSheet({ isOpen, onClose }) {
 
           <div className="co-body-grid">
             <div className="co-body-left">
-              {leftParagraphs.map((paragraph, index) => (
-                <p key={`left-${index}`}>{paragraph}</p>
+              {leftParagraphs.map((paragraph, paragraphIndex) => (
+                <div
+                  key={`left-${paragraphIndex}`}
+                  className="co-paragraph"
+                >
+                  {paragraph.map((line, lineIndex) => (
+                    <div
+                      key={`${line}-${lineIndex}`}
+                      className={
+                        lineIndex === paragraph.length - 1
+                          ? "co-line-no-justify"
+                          : undefined
+                      }
+                    >
+                      {line}
+                    </div>
+                  ))}
+                </div>
               ))}
             </div>
             <div className="co-body-right">
-              <img
-                className="co-side-image"
-                src="/copic1.webp"
-                alt="Collaboration opportunities visual"
-              />
+              {["/copic1.webp", "/copic2.webp"].map((src, index) => (
+                <img
+                  key={src}
+                  className="co-side-image"
+                  src={src}
+                  alt={`Collaboration opportunities visual ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>

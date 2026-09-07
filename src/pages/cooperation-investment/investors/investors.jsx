@@ -5,12 +5,16 @@ export default function InvestorsSheet({ isOpen, onClose }) {
   const leadRef = useRef(null);
   const [hasLeadAnimated, setHasLeadAnimated] = useState(false);
 
-  const leadLines = [
-    "ZFT Group always maintains an honest, transparent and responsible attitude.",
-  ];
+  const leadLines = ["朝晖股份始终保持着诚信、透明和负责任的态度。"];
 
   const leftParagraphs = [
-    "We provide investors with clear investment return expectations and actively fulfill information disclosure obligations to ensure that investors' rights and interests are fully protected. At the same time, we also actively seek in-depth cooperation with investors to jointly promote the rapid development of the company.",
+    [
+      "我们为投资者提供清晰的投资回报预",
+      "期并积极履行信息披露义务，确保",
+      "投资者的权益得到充分保障。同时，",
+      "我们也积极寻求与投资者的深度合",
+      "作，共同推动企业的快速发展。",
+    ],
   ];
 
   useEffect(() => {
@@ -54,8 +58,14 @@ export default function InvestorsSheet({ isOpen, onClose }) {
         aria-hidden={!isOpen}
       >
         <div className="bottom-sheet-header investors-sheet-header">
-          <h2 className="investors-sheet-title">
-            <span className="investors-sheet-title-line">INVESTORS</span>
+          <h2 className="investors-sheet-title investors-sheet-title-bilingual">
+            <span className="investors-sheet-title-cn">投资者</span>
+            <span className="investors-sheet-title-en" aria-label="Investors">
+              <span className="investors-sheet-title-line">Investors</span>
+              <span className="investors-sheet-title-line" aria-hidden="true">
+                &nbsp;
+              </span>
+            </span>
           </h2>
           <button
             className="bottom-sheet-close investors-sheet-close"
@@ -94,8 +104,24 @@ export default function InvestorsSheet({ isOpen, onClose }) {
 
           <div className="investors-body-grid">
             <div className="investors-body-left">
-              {leftParagraphs.map((paragraph, index) => (
-                <p key={`left-${index}`}>{paragraph}</p>
+              {leftParagraphs.map((paragraph, paragraphIndex) => (
+                <div
+                  key={`left-${paragraphIndex}`}
+                  className="investors-paragraph"
+                >
+                  {paragraph.map((line, lineIndex) => (
+                    <div
+                      key={`${line}-${lineIndex}`}
+                      className={
+                        lineIndex === paragraph.length - 1
+                          ? "investors-line-no-justify"
+                          : undefined
+                      }
+                    >
+                      {line}
+                    </div>
+                  ))}
+                </div>
               ))}
             </div>
             <div className="investors-body-right">
