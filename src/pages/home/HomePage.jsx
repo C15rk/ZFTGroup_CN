@@ -1068,7 +1068,7 @@ export default function HomePage({
                           <span className="section-card-media-inner">
                             <img
                               className="section-card-media-image"
-                              src="/cod.webp"
+                              src="/rh.webp"
                               alt=""
                             />
                             <span className="section-card-media-overlay" />
