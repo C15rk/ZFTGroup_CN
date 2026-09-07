@@ -13,10 +13,17 @@
 
 .cbr-sheet-title {
   text-align: left;
+  font-family: var(--cbr-font-family);
+  font-weight: 300;
+  text-transform: none;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .cbr-sheet-title-line {
   display: block;
+  font-weight: 300;
   line-height: var(--cbr-title-line-height);
 }
 
@@ -26,6 +33,20 @@
 
 .cbr-content {
   margin: 32px 20px 77px;
+}
+
+.cbr-global-map {
+  margin: 0 -44px 77px;
+  padding: 0;
+  background: transparent;
+}
+
+.cbr-global-map-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  object-fit: contain;
 }
 
 .cbr-hq-block {
@@ -67,7 +88,7 @@
 .cbr-key,
 .cbr-value {
   text-align: left;
-  font-size: 24px;
+  font-size: 28.8px;
   line-height: 1.4;
   font-weight: 100;
   font-family: var(--cbr-font-family);
@@ -95,7 +116,7 @@
   border-bottom: 1px solid var(--cbr-divider);
   text-align: left;
   white-space: pre-line;
-  font-size: 32px;
+  font-size: 64px;
   line-height: 1.2;
   font-weight: 400;
   font-family: var(--cbr-font-family);
@@ -181,7 +202,7 @@
   }
 
   .cbr-region-title {
-    font-size: 15px;
+    font-size: 30px;
   }
 
   .cbr-country-row {

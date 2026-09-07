@@ -4,106 +4,93 @@ import SiteFooter from "../../../components/layout/SiteFooter.jsx";
 export default function ContactsByRegionSheet({ isOpen, onClose }) {
   const regionCards = [
     {
-      title: "Cambodia Manufacturing\nBase",
+      title: "中国生产制造基地",
       rows: [
-        { key: "N", value: "Tai Seng Bavet Sez Co., Ltd." },
+        {
+          key: "N",
+          value:
+            "浙江朝晖过滤技术股份有限公司\nZhejiang Zhaohui Filter Technology Co., Ltd.",
+        },
         {
           key: "A",
           value:
-            "156km road No.1 , Phum Preypdaov,\nSangkat Chrokmtes, Bavet City, Svay Rieng\nProvice, Cambodia.",
+            "浙江嘉兴桐乡市崇福镇 世纪大道北侧370号\nNo.370,Century Avenue Development Zone\nChongfu Town, Tongxiang Zhejiang, China",
+        },
+        { key: "T", value: "+86-0573-88222777\n400666 1582" },
+        { key: "E", value: "sales@zftcn.com" },
+      ],
+    },
+    {
+      title: "中国生产制造基地",
+      rows: [
+        {
+          key: "N",
+          value:
+            "广东朝晖过滤技术有限公司\nGuangdong Zhaohui Filter Technology Co., Ltd.",
+        },
+        {
+          key: "A",
+          value:
+            "惠州市仲恺高新区中韩惠州产业园起步区月明路6号\n智谷智能制造项目（一期）高标准工业厂房4号厂房\n9-11层\n9-11/F, Building 4, High-Standard Industrial\nWorkshop, Zhigu Intelligent Manufacturing\nProject (Phase I), No.6 Yueming Road, Initial Zone\nof China-South Korea (Huizhou) Industrial Park,\nZhongkai High-tech Zone, Huizhou City",
         },
       ],
     },
     {
-      title: "China Manufacturing\nBase",
+      title: "中国生产制造基地",
       rows: [
-        { key: "N", value: "Zhejiang Zhaohui Filter Technology Co., Ltd." },
         {
-          key: "A",
-          value:
-            "No.370,Century Avenue Development Zone\nChongfu Town, Tongxiang Zhejiang, China",
+          key: "N",
+          value: "安徽洁弗过滤技术有限公司\nAnhui Jeffel Filter Technology Co.,Ltd.",
         },
-        { key: "T", value: "+86-0573-88222777" },
-        { key: "E", value: "marketing@seinfel.com" },
-      ],
-    },
-    {
-      title: "Malaysia Manufacturing\nBase",
-      rows: [
-        { key: "N", value: "Zhaohui Filter (Malaysia) Sdn.Bhd." },
         {
           key: "A",
           value:
-            "No.1, Jalan Teknologi 1,\nKawasan Perindustrian Tropicana,\n81500 Pekan Nanas, Johor, Malaysia\n\n",
+            "安徽省淮南市经济技术开发区绿色智造产业园4号楼\nBuilding 4, Green Intelligent Manufacturing\nIndustrial Park, Huainan Economic-Technological\nDevelopment Zone, Huainan City, Anhui Province",
         },
       ],
     },
     {
-      title: "Vietnam Manufacturing\nBase",
+      title: "柬埔寨生产制造基地",
       rows: [
-        { key: "N", value: "Vina Zhaohui Filter Co., Ltd." },
+        {
+          key: "N",
+          value: "朝晖过滤柬埔寨有限公司\nZhaohui Filter(Cambodia)Co..Ltd.",
+        },
         {
           key: "A",
           value:
-            "186 Nguyen Thi Minh Khai, Xuan Hoa Ward,\nHo Chi Minh City, Vietnam",
+            "柴桢巴域市大成二经济特区1号公路156公里\n156km road No.1 , Phum Preypdaov,\nSangkat Chrokmtes, Bavet City, Svay Rieng\nProvice, Cambodia.",
         },
       ],
     },
-  ];
-  const countryContacts = [
     {
-      country: "Germany",
-      name: "Christian Mentges",
-      mobileTelephone: "+49 176 3243 0165",
-      email: "christian.mentges@seinfel.com",
+      title: "马来西亚生产制造基地",
+      rows: [
+        {
+          key: "N",
+          value:
+            "朝晖过滤马来西亚有限公司\nZhaohui Filter (Malaysia) Sdn.Bhd.",
+        },
+        {
+          key: "A",
+          value:
+            "马来西亚 柔佛州笨珍县 北干那那镇特罗必加纳\n工业园区一号工艺路1号\nNo.1, Jalan Teknologi 1,\nKawasan Perindustrian Tropicana,\n81500 Pekan Nanas, Johor, Malaysia",
+        },
+      ],
     },
     {
-      country: "France",
-      name: "Philippe Baumann",
-      mobileTelephone: "+33 6 30 96 28 71",
-      email: "philippe.baumann@seinfel.com",
-    },
-    {
-      country: "Dubai",
-      name: "Sayyad Jasim",
-      mobileTelephone: "+971 543509985",
-      email: "sayyad.jasim@zftuk.com",
-    },
-    {
-      country: "United Kingdom",
-      name: "Steven You",
-      mobileTelephone: "+44 7746139683",
-      email: "steven.you@zftuk.com",
-    },
-    {
-      country: "India",
-      name: "Sayyad Jasim",
-      mobileTelephone: "+971 543509985",
-      email: "sayyad.jasim@zftuk.com",
-    },
-    {
-      country: "Japan",
-      name: "陆恺 / 陸カイ",
-      mobileTelephone: "+86-132 9197 8218",
-      email: "kent.lu@zftcn.com",
-    },
-    {
-      country: "Korea",
-      name: "KIM CHANGMIN",
-      mobileTelephone: "+ 86-156 1858 6702",
-      email: "kim.jin@zftcn.com",
-    },
-    {
-      country: "United States",
-      name: "Andrew Sharp",
-      mobileTelephone: "+44 7968 873104",
-      email: "andrew.sharp@zftuk.com",
-    },
-    {
-      country: "Singapore",
-      name: "steven.you",
-      mobileTelephone: "+44(0) 7746 139 683",
-      email: "steven.you@zftuk.com",
+      title: "越南生产制造基地",
+      rows: [
+        {
+          key: "N",
+          value: "越南朝晖过滤有限公司\nVina Zhaohui Filter Co., Ltd.",
+        },
+        {
+          key: "A",
+          value:
+            "越南同奈省三福坊三福工业区，\n33 号地块，6A 厂房\nFactory 6A, Plot No.33, Tam Phuoc Industrial\nZone, Tam Phuoc Ward, Dong Nai City,\nVietnam",
+        },
+      ],
     },
   ];
 
@@ -127,9 +114,9 @@ export default function ContactsByRegionSheet({ isOpen, onClose }) {
         aria-hidden={!isOpen}
       >
         <div className="bottom-sheet-header cbr-sheet-header">
-          <h2 className="cbr-sheet-title">
-            <span className="cbr-sheet-title-line">CONTACTS</span>
-            <span className="cbr-sheet-title-line">BY REGION</span>
+          <h2 className="cbr-sheet-title cbr-sheet-title-stacked">
+            <span className="cbr-sheet-title-line">联系我们</span>
+            <span className="cbr-sheet-title-line">Contact Us</span>
           </h2>
           <button
             className="bottom-sheet-close cbr-sheet-close"
@@ -142,35 +129,20 @@ export default function ContactsByRegionSheet({ isOpen, onClose }) {
         </div>
 
         <div className="cbr-content">
-          <section className="cbr-hq-block" aria-label="Headquarters details">
-            <h3 className="cbr-hq-title">HEADQUARTERS</h3>
-
-            <div className="cbr-row">
-              <span className="cbr-key">N</span>
-              <span className="cbr-value">FILTERPRO DEVELOPMENT PTE.LTD.</span>
-            </div>
-
-            <div className="cbr-row">
-              <span className="cbr-key">A</span>
-              <span className="cbr-value">
-                987 SERANGOON ROAD SINGAPORE (328147)
-              </span>
-            </div>
-
-            <div className="cbr-row">
-              <span className="cbr-key">T</span>
-              <span className="cbr-value">+65 (3) 1064341</span>
-            </div>
-
-            <div className="cbr-row">
-              <span className="cbr-key">E</span>
-              <span className="cbr-value">sales@seinfel.com</span>
-            </div>
+          <section className="cbr-global-map" aria-label="Global presence map">
+            <img
+              className="cbr-global-map-image"
+              src="/mapnew.webp"
+              alt="Global presence"
+            />
           </section>
 
           <section className="cbr-region-grid" aria-label="Regional contacts">
-            {regionCards.map((card) => (
-              <article key={card.title} className="cbr-region-card">
+            {regionCards.map((card, cardIndex) => (
+              <article
+                key={`${card.title}-${cardIndex}`}
+                className="cbr-region-card"
+              >
                 <h3 className="cbr-region-title">{card.title}</h3>
                 {card.rows.map((row) => (
                   <div
@@ -182,37 +154,6 @@ export default function ContactsByRegionSheet({ isOpen, onClose }) {
                   </div>
                 ))}
               </article>
-            ))}
-          </section>
-
-          <section
-            className="cbr-country-table"
-            aria-label="Country contacts table"
-          >
-            <div className="cbr-country-row cbr-country-row-header">
-              <span>COUNTRY</span>
-              <span>NAME</span>
-              <span>
-                MOBILE
-                <br />
-                TELEPHONE
-              </span>
-              <span>E-MAIL</span>
-            </div>
-            {countryContacts.map((item) => (
-              <div
-                key={`${item.country}-${item.name}-${item.email}`}
-                className="cbr-country-row"
-              >
-                <span>{item.country}</span>
-                <span
-                  className={item.country === "Japan" ? "cbr-name-song" : ""}
-                >
-                  {item.name}
-                </span>
-                <span>{item.mobileTelephone}</span>
-                <span>{item.email}</span>
-              </div>
             ))}
           </section>
         </div>
