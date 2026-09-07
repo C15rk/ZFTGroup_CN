@@ -3,8 +3,10 @@
   --sde-copy-side-margin: 123px;
   --sde-text-side-margin: clamp(24px, 6.40625vw, 123px);
   --sde-title-line-height: 0.9;
-  --sde-lead-font-size: 32px;
-  --sde-copy-font-size: 24px;
+  --sde-lead-font-size: 45px;
+  --sde-copy-font-size: 28px;
+  --sde-lead-line-height: 1.5;
+  --sde-copy-line-height: 1.8;
   --sde-section-gap: 62px;
   --sde-grid-gap: 20px;
   --sde-font-family: "Alibaba PuHuiTi 3.0", "Arial", sans-serif;
@@ -18,11 +20,35 @@
 
 .sde-sheet-title {
   text-align: left;
+  line-height: var(--sde-title-line-height);
+}
+
+.sde-sheet-title-bilingual {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.22em;
+  font-weight: 300;
+  text-transform: none;
+}
+
+.sde-sheet-title-cn {
+  display: block;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.sde-sheet-title-en {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 1em;
+  font-size: 0.46em;
+  font-weight: 300;
+  line-height: 0.92;
 }
 
 .sde-sheet-title-line {
   display: block;
-  line-height: var(--sde-title-line-height);
 }
 
 .sde-sheet-close {
@@ -43,50 +69,52 @@
 }
 
 .sde-lead {
-  margin: 77px var(--sde-horizontal-gutter);
-  margin-bottom: 62px;
-  text-align: center;
+  margin: 90px var(--sde-text-side-margin) 160px;
+  margin-left: calc(var(--sde-text-side-margin) - 32px);
+  text-align: left;
   font-size: var(--sde-lead-font-size);
-  line-height: 1.4;
+  line-height: var(--sde-lead-line-height);
   font-family: var(--sde-font-family);
-  font-weight: 100;
+  font-weight: 450;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .sde-split-grid {
-  margin-left: var(--sde-copy-side-margin);
+  margin-left: calc(var(--sde-text-side-margin) - 32px);
   margin-right: var(--sde-copy-side-margin);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: var(--sde-grid-gap);
   align-items: start;
 }
 
-.sde-split-left p,
+.sde-intro-copy,
 .sde-body-copy p {
   margin: 0;
   width: 100%;
   max-width: none;
   text-align: left;
   font-size: var(--sde-copy-font-size);
-  line-height: 1.5;
+  line-height: var(--sde-copy-line-height);
   white-space: normal;
   font-family: var(--sde-font-family);
-  font-weight: 100;
+  font-weight: 300;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .sde-split-left {
-  margin-left: calc(var(--sde-text-side-margin) - var(--sde-copy-side-margin));
+  margin-left: 0;
 }
 
 .sde-info-image {
-  width: 100%;
+  display: block;
+  width: 66.6667%;
   height: auto;
+  margin: 120px auto 140px 0;
   max-height: 620px;
   object-fit: contain;
 }
@@ -114,7 +142,7 @@
 }
 
 .sde-badge-stack {
-  margin: var(--sde-section-gap) var(--sde-copy-side-margin) 0;
+  margin: 0 var(--sde-copy-side-margin) 0;
   display: grid;
   gap: 0px;
 }
@@ -131,18 +159,18 @@
 }
 
 .sde-card-right-copy {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 42px;
+  padding-bottom: 52px;
   color: #000000;
   text-align: left;
-  font-weight: 100;
+  font-weight: 300;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .sde-card-right-block + .sde-card-right-block {
-  margin-top: 18px;
+  margin-top: 92px;
 }
 
 .sde-card-right-block h3 {
@@ -152,7 +180,7 @@
   margin: 0;
   font-size: var(--sde-copy-font-size);
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 600;
   font-family: "Alibaba PuHuiTi 3.0", "Arial", sans-serif;
   text-align: left;
 }
@@ -167,26 +195,27 @@
 }
 
 .sde-card-right-block p {
-  margin: 6px 0 0;
+  margin: 28px 0 0;
   padding-left: 25px;
   font-size: var(--sde-copy-font-size);
   line-height: 1.5;
-  font-weight: 100;
+  font-weight: 300;
   font-family: "Alibaba PuHuiTi 3.0", "Arial", sans-serif;
   text-align: left;
 }
 
 .sde-card-right-copy-social p {
   margin: 0;
+  padding-left: 25px;
   font-size: var(--sde-copy-font-size);
   line-height: 1.5;
-  font-weight: 100;
+  font-weight: 300;
   font-family: "Alibaba PuHuiTi 3.0", "Arial", sans-serif;
   text-align: left;
 }
 
 .sde-card-right-copy-social p + p {
-  margin-top: 18px;
+  margin-top: 42px;
 }
 
 .sde-lines .sde-line-wrap {
@@ -290,7 +319,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 4px;
+  min-width: 440px;
+  min-height: 70px;
+  padding: 14px 24px;
   background: var(--badge-gradient);
   color: #fff;
   font-size: 36px;
@@ -301,8 +332,9 @@
 
 .badge-title {
   display: block;
-  width: 16ch;
+  width: auto;
   text-align: center;
+  white-space: nowrap;
 }
 
 .badge::before,
