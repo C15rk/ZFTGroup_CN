@@ -736,6 +736,7 @@ export default function HomePage({
                         </span>
                         <SectionCardTitle zh="企业文化与价值观" en={["Corporate","Culture","& Values"]} />
                       </button>
+                      {/*
                       <button
                         className="section-card has-media section-card-align-left actions-card-bg-pwc brand-history-trigger"
                         type="button"
@@ -763,6 +764,7 @@ export default function HomePage({
                         </span>
                         <SectionCardTitle zh="公益与社区影响" en={["Public Welfare", "& Community", "Impact"]} />
                       </button>
+                      */}
                       <button
                         className="section-card has-media section-card-align-left actions-card-bg-news1 brand-history-trigger"
                         type="button"
