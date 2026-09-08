@@ -6,15 +6,22 @@ export default function AtZFTGroupSheet({ isOpen, onClose }) {
   const [hasLeadAnimated, setHasLeadAnimated] = useState(false);
 
   const leadLines = [
-    "Talent Strategy:",
-    "Focus on value creators, build platforms, co-create",
-    "the business, share value, recruit strategically,",
-    "manage effectively, retain through incentives, and",
-    "develop through performance.",
+    "人才战略：以价值创造者为本",
+    "塑造舞台、共创事业、共享价值、战略招人",
+    "管理用人 、激励留人、绩效育人",
   ];
 
   const leftParagraphs = [
-    "At ZFT Group we have designed a fair and well structured compensation system that fully provides employees with the benefits that reward success. Employees have the opportunity to participate in the company globalization program with multiple operational bases across USA, Europe, Middle East and Asia.",
+    [
+      "在朝晖，我们设计了科学合理的薪酬体",
+      "系，充分享有法定的所有保障；同时，",
+      "员工有机会参与企业全球化布局的进",
+      "程，提升、感受不一样的世界观；员工",
+      "们工作之余的闲暇活动同样精彩，我们",
+      "配备了健身中心、各类球类场地，以及",
+      "文化活动中心，全方位提升员工在朝晖",
+      "的幸福指数。",
+    ],
   ];
 
   useEffect(() => {
@@ -58,8 +65,12 @@ export default function AtZFTGroupSheet({ isOpen, onClose }) {
         aria-hidden={!isOpen}
       >
         <div className="bottom-sheet-header atzft-sheet-header">
-          <h2 className="atzft-sheet-title">
-            <span className="atzft-sheet-title-line">AT ZFT GROUP</span>
+          <h2 className="atzft-sheet-title atzft-sheet-title-bilingual">
+            <span className="atzft-sheet-title-cn">在朝晖</span>
+            <span className="atzft-sheet-title-en" aria-label="At ZFT Group">
+              <span className="atzft-sheet-title-line">At</span>
+              <span className="atzft-sheet-title-line">ZFT Group</span>
+            </span>
           </h2>
           <button
             className="bottom-sheet-close atzft-sheet-close"
@@ -87,8 +98,21 @@ export default function AtZFTGroupSheet({ isOpen, onClose }) {
 
           <div className="atzft-body-grid">
             <div className="atzft-body-left">
-              {leftParagraphs.map((paragraph, index) => (
-                <p key={`left-${index}`}>{paragraph}</p>
+              {leftParagraphs.map((paragraph, paragraphIndex) => (
+                <div key={`left-${paragraphIndex}`} className="atzft-paragraph">
+                  {paragraph.map((line, lineIndex) => (
+                    <div
+                      key={`${line}-${lineIndex}`}
+                      className={
+                        lineIndex === paragraph.length - 1
+                          ? "atzft-line-no-justify"
+                          : undefined
+                      }
+                    >
+                      {line}
+                    </div>
+                  ))}
+                </div>
               ))}
             </div>
             <div className="atzft-body-right">
