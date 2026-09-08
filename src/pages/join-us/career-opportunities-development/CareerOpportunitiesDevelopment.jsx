@@ -9,17 +9,21 @@ export default function CareerOpportunitiesDevelopmentSheet({
   const [hasLeadAnimated, setHasLeadAnimated] = useState(false);
 
   const leadLines = [
-    "Employee Code of Conduct:",
-    "Respect the cause and pursue excellence.",
-    "Be proactive and dedicated.",
-    "Be diligent in learning and bold in competition.",
-    "Uphold integrity and collaborate widely.",
-    "Develop together and achieve brilliance collectively.",
-    "Pursue truth and demonstrate virtue.",
+    "员工行为准则：敬重事业，追求卓越",
+    "主动积极，恪尽职守；勤奋好学，敢于竞争",
+    "信仰诚信，广泛合作；共同发展，共铸辉煌",
+    "追求真理，彰显品德",
   ];
 
   const leftParagraphs = [
-    "At ZFT Group, we pay full attention to employees’ career paths and development journey. We implement a multi-channel development system, encourage job rotation to enhance skills comprehensively, and support healthy competition and promotion. Employees have ample autonomy and opportunities for targeted growth, allowing them to fully leverage their strengths.",
+    [
+      "在朝晖，我们充分关注员工的成长通道",
+      "与成长过程，我们实行多通道发展机",
+      "制，鼓励岗位轮换，全方位提升自我能",
+      "力，也支持健康的竞聘与晋升，员工有",
+      "充分的自主选择权和专项提升可能，一",
+      "展所长。",
+    ],
   ];
 
   useEffect(() => {
@@ -63,10 +67,15 @@ export default function CareerOpportunitiesDevelopmentSheet({
         aria-hidden={!isOpen}
       >
         <div className="bottom-sheet-header cod-sheet-header">
-          <h2 className="cod-sheet-title">
-            <span className="cod-sheet-title-line">CAREER</span>
-            <span className="cod-sheet-title-line">OPPORTUNITIES</span>
-            <span className="cod-sheet-title-line">& DEVELOPMENT</span>
+          <h2 className="cod-sheet-title cod-sheet-title-bilingual">
+            <span className="cod-sheet-title-cn">工作机会与发展</span>
+            <span
+              className="cod-sheet-title-en"
+              aria-label="Career Opportunities and Development"
+            >
+              <span className="cod-sheet-title-line">Career Opportunities</span>
+              <span className="cod-sheet-title-line">& Development</span>
+            </span>
           </h2>
           <button
             className="bottom-sheet-close cod-sheet-close"
@@ -94,8 +103,21 @@ export default function CareerOpportunitiesDevelopmentSheet({
 
           <div className="cod-body-grid">
             <div className="cod-body-left">
-              {leftParagraphs.map((paragraph, index) => (
-                <p key={`left-${index}`}>{paragraph}</p>
+              {leftParagraphs.map((paragraph, paragraphIndex) => (
+                <div key={`left-${paragraphIndex}`} className="cod-paragraph">
+                  {paragraph.map((line, lineIndex) => (
+                    <div
+                      key={`${line}-${lineIndex}`}
+                      className={
+                        lineIndex === paragraph.length - 1
+                          ? "cod-line-no-justify"
+                          : undefined
+                      }
+                    >
+                      {line}
+                    </div>
+                  ))}
+                </div>
               ))}
             </div>
             <div className="cod-body-right">
