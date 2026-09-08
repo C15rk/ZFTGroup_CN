@@ -2,7 +2,16 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import SiteFooter from "../../../components/layout/SiteFooter.jsx";
 import { newsItems } from "../../../data/news.js";
 
-const ITEMS_PER_PAGE = 5;
+const ITEMS_PER_PAGE = 4;
+
+const FEATURED_NEWS_ORDER = [
+  "exhibition-preview-2026",
+  "ahr-expo-2026",
+  "packcon-2026",
+  "canton-fair-spring-2026",
+  "q1-business-review-2026",
+  "interpack-2026",
+];
 
 function renderStopParagraph(paragraph, index) {
   const [headline, ...restLines] = paragraph.split("\n");
@@ -146,7 +155,21 @@ export default function NewsSheet({ isOpen, onClose }) {
   const orderedNews = useMemo(
     () =>
       [...newsItems].sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+        (a, b) => {
+          const aFeaturedIndex = FEATURED_NEWS_ORDER.indexOf(a.id);
+          const bFeaturedIndex = FEATURED_NEWS_ORDER.indexOf(b.id);
+          const aIsFeatured = aFeaturedIndex !== -1;
+          const bIsFeatured = bFeaturedIndex !== -1;
+
+          if (aIsFeatured && bIsFeatured) {
+            return aFeaturedIndex - bFeaturedIndex;
+          }
+
+          if (aIsFeatured) return -1;
+          if (bIsFeatured) return 1;
+
+          return new Date(b.date).getTime() - new Date(a.date).getTime();
+        },
       ),
     [],
   );
@@ -247,8 +270,12 @@ export default function NewsSheet({ isOpen, onClose }) {
         aria-hidden={!isOpen}
       >
         <div className="bottom-sheet-header news-sheet-header">
-          <h2 className="news-sheet-title">
-            <span className="news-sheet-title-line">NEWS</span>
+          <h2 className="news-sheet-title news-sheet-title-bilingual">
+            <span className="news-sheet-title-cn">新闻</span>
+            <span className="news-sheet-title-en" aria-label="Company News">
+              <span className="news-sheet-title-line">Company</span>
+              <span className="news-sheet-title-line">News</span>
+            </span>
           </h2>
           <button
             className="bottom-sheet-close news-sheet-close"
@@ -291,7 +318,7 @@ export default function NewsSheet({ isOpen, onClose }) {
                         onClick={() => toggleExpanded(item.id, true)}
                         disabled={isExpanded}
                       >
-                        Read More
+                        阅读更多
                       </button>
                     </div>
                     <div
@@ -325,7 +352,7 @@ export default function NewsSheet({ isOpen, onClose }) {
                             type="button"
                             onClick={() => toggleExpanded(item.id, false)}
                           >
-                            Hide
+                            收起
                           </button>
                         </div>
                       </div>
@@ -390,7 +417,7 @@ export default function NewsSheet({ isOpen, onClose }) {
               onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
               disabled={currentPage === 1}
             >
-              Previous
+              上一页
             </button>
             {Array.from({ length: totalPages }, (_, index) => {
               const pageNumber = index + 1;
@@ -413,7 +440,7 @@ export default function NewsSheet({ isOpen, onClose }) {
               }
               disabled={currentPage === totalPages}
             >
-              Next
+              下一页
             </button>
           </div>
         </div>
