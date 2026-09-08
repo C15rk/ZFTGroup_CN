@@ -1,7 +1,7 @@
 export const siteSections = [
   {
     key: "our-brand",
-    label: { zh: "我们的品牌", en: ["Our", "Brand"] },
+    label: { zh: "我们的品牌", en: ["OUR", "BRAND"] },
     path: "/our-brand",
     description: {
       zh: "朝晖股份成立于1993年，起步于空气过滤领域。历经三十余年的发展，已逐步形成以空气过滤、水过滤、过滤材料研发生产与集成应用，以及环保型可生物降解包装方案为核心的四大业务板块。",
@@ -10,7 +10,7 @@ export const siteSections = [
   },
   {
     key: "our-actions",
-    label: { zh: "我们的行为", en: ["Our", "Actions"] },
+    label: { zh: "我们的行为", en: ["OUR", "ACTIONS"] },
     path: "/our-actions",
     description: {
       zh: "我们秉持可持续发展理念，持续通过材料优化、减排降耗、环境保护、关爱员工及回馈社会等举措，致力于实现卓越绩效与高质量发展。",
@@ -19,7 +19,7 @@ export const siteSections = [
   },
   {
     key: "global-presence",
-    label: { zh: "全球布局", en: ["Global", "Presence"] },
+    label: { zh: "全球布局", en: ["GLOBAL", "PRESENCE"] },
     path: "/global-presence",
     description: {
       zh: "朝晖拥有稳固的全球布局，客户与合作伙伴遍及北美、欧洲、亚洲及中东，服务覆盖美国、英国、德国、意大利、法国、澳大利亚、加拿大、俄罗斯、日本、韩国、马来西亚、中国、新加坡、越南、泰国、阿联酋等全球市场，我们为全球客户提供可靠环保的产品与解决方案。",
@@ -28,7 +28,7 @@ export const siteSections = [
   },
   {
     key: "cooperation-investment",
-    label: { zh: "合作与投资", en: ["Cooperation", "& Investment"] },
+    label: { zh: "合作与投资", en: ["COOPERATION", "& INVESTMENT"] },
     path: "/cooperation-investment",
     description: {
       zh: "无论您是供应商、客户还是员工，选择朝晖，意味着与一家在过滤行业深耕三十余年、值得信赖的合作伙伴携手同行。\n作为持续发展战略的重要组成部分，我们正积极寻求与全球各地经销商建立合作关系，并不断完善与提升经销商合作体系。我们高度重视合作伙伴在商业道德与客户服务标准方面与朝晖保持一致，共同秉持诚信经营与高品质服务理念，实现互利共赢、协同发展。",
@@ -37,7 +37,7 @@ export const siteSections = [
   },
   {
     key: "join-us",
-    label: { zh: "招聘", en: ["Join", "Us"] },
+    label: { zh: "招聘", en: ["JOIN", "US"] },
     path: "/join-us",
     description: {
       zh: "在朝晖，我们构建了公平、完善且体系化的薪酬机制，充分保障员工享有与其业绩成果相匹配的激励与回报。员工亦有机会参与公司全球化发展项目，在美国、欧洲、中东及亚洲等多个运营基地开展多元化发展与实践，实现更广阔的职业成长空间。",

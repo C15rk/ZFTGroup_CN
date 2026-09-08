@@ -44,7 +44,7 @@
 .content-title-bilingual {
   display: inline-flex;
   align-items: center;
-  gap: 0.36em;
+  gap: 0.2em;
   text-transform: none;
   font-weight: 400;
   white-space: nowrap;
@@ -62,7 +62,7 @@
   justify-content: center;
   gap: 0;
   height: 1em;
-  font-size: 0.46em;
+  font-size: 0.56em;
   font-weight: 400;
   line-height: 0.92;
   text-transform: none;
