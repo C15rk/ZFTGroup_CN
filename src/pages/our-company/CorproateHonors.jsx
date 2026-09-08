@@ -44,8 +44,8 @@ export default function CorproateHonors({ isOpen, onClose }) {
               className="corporate-honors-title-en"
               aria-label="Corporate Certification"
             >
-              <span className="corporate-honors-title-line">CORPORATE</span>
-              <span className="corporate-honors-title-line">CERTIFICATION</span>
+              <span className="corporate-honors-title-line">Corporate</span>
+              <span className="corporate-honors-title-line">Certification</span>
             </span>
           </h2>
           <button

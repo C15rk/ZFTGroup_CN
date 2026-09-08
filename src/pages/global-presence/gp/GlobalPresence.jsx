@@ -23,8 +23,8 @@ export default function GlobalPresenceSheet({ isOpen, onClose }) {
       >
         <div className="bottom-sheet-header gp-sheet-header">
           <h2 className="gp-sheet-title">
-            <span className="gp-sheet-title-line">GLOBAL</span>
-            <span className="gp-sheet-title-line">PRESENCE</span>
+            <span className="gp-sheet-title-line">Global</span>
+            <span className="gp-sheet-title-line">Presence</span>
           </h2>
           <button
             className="bottom-sheet-close gp-sheet-close"
