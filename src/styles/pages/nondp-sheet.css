@@ -16,11 +16,35 @@
 
 .ndp-sheet-title {
   text-align: left;
+  line-height: 0.9;
+}
+
+.ndp-sheet-title-bilingual {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.22em;
+  font-weight: 300;
+  text-transform: none;
+}
+
+.ndp-sheet-title-cn {
+  display: block;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.ndp-sheet-title-en {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 1em;
+  font-size: 0.46em;
+  font-weight: 300;
+  line-height: 0.92;
 }
 
 .ndp-sheet-title-line {
   display: block;
-  line-height: var(--ndp-title-line-height);
 }
 
 .ndp-sheet-close {
@@ -41,24 +65,43 @@
   color: #bcbcbc;
 }
 
-.ndp-sheet .ndp-intro,
+.ndp-sheet .ndp-intro {
+  width: auto;
+  margin: 90px var(--ndp-text-side-margin) 0;
+  margin-left: calc(var(--ndp-text-side-margin) - 32px);
+  max-width: none;
+  text-align: left;
+  font-size: 45px;
+  font-weight: 450;
+  line-height: 1.5;
+  font-family: var(--ndp-font-family);
+  color: #000000;
+  white-space: pre-line;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .ndp-sheet .ndp-closing {
-  width: calc(100% - (var(--ndp-text-side-margin) * 2));
+  width: fit-content;
+  max-width: calc(100% - (var(--ndp-text-side-margin) * 2));
   margin: 0 auto;
   text-align: center;
-  font-size: 32px;
-  font-weight: 100;
-  line-height: 1.5;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.2;
   color: #000000;
+  white-space: pre;
 }
 
 .ndp-policy-grid {
-  margin: 62px var(--ndp-text-side-margin) 0;
+  margin: 180px var(--ndp-text-side-margin) 0;
+  margin-left: calc(var(--ndp-text-side-margin) - 32px);
 }
 
 .ndp-policy-row {
-  border-top: 1px solid var(--ndp-divider-color);
-  padding: 30px 0;
+  border-top: 2px solid var(--ndp-divider-color);
+  padding: 90px 0;
   display: grid;
   grid-template-columns: 0.95fr 2.05fr;
   gap: var(--ndp-grid-gap);
@@ -66,7 +109,7 @@
 }
 
 .ndp-policy-row:last-child {
-  border-bottom: 1px solid var(--ndp-divider-color);
+  border-bottom: 2px solid var(--ndp-divider-color);
 }
 
 .ndp-policy-left {
@@ -74,13 +117,21 @@
   line-height: 1.2;
   font-weight: 400;
   color: #000000;
+  white-space: pre-line;
+  padding-left: 1em;
 }
 
 .ndp-policy-right {
-  font-size: 24px;
-  line-height: 1.5;
-  font-weight: 100;
+  margin-top: -8px;
+  font-size: 28px;
+  line-height: 1.7;
+  font-weight: 300;
+  font-family: var(--ndp-font-family);
   color: #000000;
+  white-space: pre-line;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .ndp-lines .ndp-line-wrap {
@@ -88,7 +139,8 @@
 }
 
 .ndp-closing {
-  padding-top: 30px;
+  padding-top: 110px;
+  padding-bottom: 120px;
 }
 
 .ndp-lines .ndp-line {

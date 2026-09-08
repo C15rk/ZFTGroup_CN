@@ -5,31 +5,34 @@ export default function NonDiscriminationPolicySheet({ isOpen, onClose }) {
   const leadRef = useRef(null);
   const [hasLeadAnimated, setHasLeadAnimated] = useState(false);
 
-  const leadLines = ["Code of Conduct:", "Integrity, Mutual Trust, Team"];
+  const leadLines = [
+    "行为指南",
+    "正直诚信、相互信任、团队合作、引领变革",
+  ];
 
   const introParagraph =
-    "At ZFT Group, our Non-Discrimination Policy reflects our firm commitment to fairness, equality, and inclusion. We resolutely oppose any form of discrimination and are dedicated to creating a diverse and inclusive work environment where every employee feels respected and treated equally.";
+    "我们朝晖的无歧视政策体现了我们对公平、平\n等和包容的坚定承诺，我们坚决反对任何形式\n的歧视行为，致力于创造一个多元化、包容性\n的工作环境，让每一位员工都能感受到尊重与\n平等。";
 
   const policyBlocks = [
     {
-      left: "We respect the uniqueness and diversity of every individual.",
+      left: "我们尊重每个人的\n独特性和多样性",
       right:
-        "At ZFT Group, we value the uniqueness and diversity of each individual, and we do not discriminate against employees based on race, religion, gender, age, nationality, skin color, sexual orientation, marital status, social status, economic capability, education level, or any other personal characteristic unrelated to work. We recognize the contributions of every employee, believe in each person’s unique value, and uphold their right to equal opportunities.",
+        "在朝晖，我们尊重每个人的独特性和多样性，不因种族、宗教、性别、\n年龄、国籍、肤色、性取向、婚姻状况、社会地位、经济能力、教育程\n度或其他非工作相关的个人特征而对员工进行歧视。我们重视每个员工\n的贡献，相信每个人都有其独特的价值，应享有平等的权利和机会。",
     },
     {
-      left: "We always adhere to the principles of fairness and impartiality.",
+      left: "朝晖始终坚持\n公平、公正的原则",
       right:
-        "In recruitment, training, promotion, and benefits distribution, ZFT Group consistently adheres to principles of fairness and impartiality. Employees are evaluated based on their abilities, performance, and potential rather than personal characteristics or background. We strive to provide equal development opportunities for all employees, enabling everyone to showcase their talents and achieve their professional goals.",
+        "在招聘、培训、晋升和福利分配等方面，朝晖始终坚持公平、公正的原\n则。我们根据员工的能力、业绩和潜力进行评估，而非基于其个人特征\n或背景。我们努力为每位员工提供平等的发展机会，让每个人都有机会\n展现自己的才华，实现个人职业目标。",
     },
     {
-      left: "Safe guarding employees rights.",
+      left: "完善的投诉处理机制",
       right:
-        "Additionally, ZFT Group has established a comprehensive complaint handling mechanism, encouraging employees to report any form of discrimination. All complaints are taken seriously, investigated fairly and transparently, and corrective actions are implemented when necessary. We are committed to safeguarding employees’ rights and ensuring that everyone can work and live in a discrimination-free environment.",
+        "朝晖还建立了完善的投诉处理机制，鼓励员工积极反馈任何形式的歧视\n行为。对于任何涉及歧视的投诉，我们将认真对待，进行公正、透明的\n调查，并采取必要的措施予以纠正。我们坚决维护员工的权益，确保每\n个人都能在一个无歧视的环境中工作和生活。",
     },
   ];
 
   const closingParagraph =
-    "We will continue our efforts to foster an increasingly diverse and inclusive workplace, where every employee feels respected and treated equally, collectively promoting the sustainable growth and prosperity of ZFT Group.";
+    "我们将不断努力，营造一个更加多元、包容的工作环境\n让每一位员工都能感受到尊重与平等，共同推动企业的持续发展和繁荣";
 
   useEffect(() => {
     if (!isOpen) return;
@@ -71,9 +74,15 @@ export default function NonDiscriminationPolicySheet({ isOpen, onClose }) {
         aria-hidden={!isOpen}
       >
         <div className="bottom-sheet-header ndp-sheet-header">
-          <h2 className="ndp-sheet-title">
-            <span className="ndp-sheet-title-line">NON-DISCRIMINATION</span>
-            <span className="ndp-sheet-title-line">POLICY</span>
+          <h2 className="ndp-sheet-title ndp-sheet-title-bilingual">
+            <span className="ndp-sheet-title-cn">无歧视政策</span>
+            <span
+              className="ndp-sheet-title-en"
+              aria-label="Non-Discrimination Policy"
+            >
+              <span className="ndp-sheet-title-line">Non-Discrimination</span>
+              <span className="ndp-sheet-title-line">Policy</span>
+            </span>
           </h2>
           <button
             className="bottom-sheet-close ndp-sheet-close"
