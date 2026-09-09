@@ -29,35 +29,29 @@ import { siteSections } from "../../data/sections.js";
 const POPUP_SCROLL_MODE = "fixed-locked";
 const COLLAPSIBLE_HEIGHT_BUFFER = 80;
 
-const DEFAULT_DOCUMENT_TITLE = "ZFT Group";
+const DEFAULT_DOCUMENT_TITLE = "朝晖股份";
 
 const PAGE_TITLE_MAP = {
   "/": DEFAULT_DOCUMENT_TITLE,
-  "/brand-history": "Brand History - ZFT Group",
-  "/r-and-d-manufacturing-capabilities":
-    "R&D and Manufacturing Capabilities - ZFT Group",
-  "/products-and-solutions": "Products & Solutions - ZFT Group",
-  "/innovation": "Innovation - ZFT Group",
-  "/sustainable-development-and-esg":
-    "Sustainable Development & ESG - ZFT Group",
-  "/ethics-and-corporate-responsibility":
-    "Ethics & Corporate Responsibility - ZFT Group",
-  "/corporate-culture-and-values": "Corporate Culture & Values - ZFT Group",
-  "/public-welfare-and-community-impact":
-    "Public Welfare & Community Impact - ZFT Group",
-  "/news": "News - ZFT Group",
-  "/corporate-honors": "Corporate Honors - ZFT Group",
-  "/global-presence": "Global Presence - ZFT Group",
-  "/contacts-by-region": "Contacts by Region - ZFT Group",
-  "/partners": "Partners - ZFT Group",
-  "/collaboration-opportunities": "Collaboration Opportunities - ZFT Group",
-  "/investors": "Investors - ZFT Group",
-  "/at-zft-group": "At ZFT Group - ZFT Group",
-  "/career-opportunities-and-development":
-    "Career Opportunities & Development - ZFT Group",
-  "/non-discrimination-policy": "Non-Discrimination Policy - ZFT Group",
-  "/recruitment-and-human-resources":
-    "Recruitment & Human Resources - ZFT Group",
+  "/brand-history": DEFAULT_DOCUMENT_TITLE,
+  "/r-and-d-manufacturing-capabilities": DEFAULT_DOCUMENT_TITLE,
+  "/products-and-solutions": DEFAULT_DOCUMENT_TITLE,
+  "/innovation": DEFAULT_DOCUMENT_TITLE,
+  "/sustainable-development-and-esg": DEFAULT_DOCUMENT_TITLE,
+  "/ethics-and-corporate-responsibility": DEFAULT_DOCUMENT_TITLE,
+  "/corporate-culture-and-values": DEFAULT_DOCUMENT_TITLE,
+  "/public-welfare-and-community-impact": DEFAULT_DOCUMENT_TITLE,
+  "/news": DEFAULT_DOCUMENT_TITLE,
+  "/corporate-honors": DEFAULT_DOCUMENT_TITLE,
+  "/global-presence": DEFAULT_DOCUMENT_TITLE,
+  "/contacts-by-region": DEFAULT_DOCUMENT_TITLE,
+  "/partners": DEFAULT_DOCUMENT_TITLE,
+  "/collaboration-opportunities": DEFAULT_DOCUMENT_TITLE,
+  "/investors": DEFAULT_DOCUMENT_TITLE,
+  "/at-zft-group": DEFAULT_DOCUMENT_TITLE,
+  "/career-opportunities-and-development": DEFAULT_DOCUMENT_TITLE,
+  "/non-discrimination-policy": DEFAULT_DOCUMENT_TITLE,
+  "/recruitment-and-human-resources": DEFAULT_DOCUMENT_TITLE,
 };
 
 function SectionTitle({ label }) {
