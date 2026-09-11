@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import DeferredSheet from "../../components/layout/DeferredSheet.jsx";
 
 import BrandHistorySheet from "../our-brand/brand-history/BrandHistorySheet.jsx";
 import RandDAndManufacturingCapabilitiesSheet from "../our-brand/r-and-d-manufacturing-capabilities/RandDAndManufacturingCapabilitiesSheet.jsx";
@@ -1258,133 +1259,152 @@ export default function HomePage({
           </section>
         ))}
       </nav>
-      <BrandHistorySheet
+      <DeferredSheet
+        component={BrandHistorySheet}
         isOpen={isBrandHistoryOpen}
         onClose={() => {
           setIsBrandHistoryOpen(false);
           navigate("/");
         }}
       />
-      <RandDAndManufacturingCapabilitiesSheet
+      <DeferredSheet
+        component={RandDAndManufacturingCapabilitiesSheet}
         isOpen={isRandDAndManufacturingCapabilitiesOpen}
         onClose={() => {
           setIsRandDAndManufacturingCapabilitiesOpen(false);
           navigate("/");
         }}
       />
-      <ProductsSolutionsSheet
+      <DeferredSheet
+        component={ProductsSolutionsSheet}
         isOpen={isProductsSolutionsOpen}
         onClose={() => {
           setIsProductsSolutionsOpen(false);
           navigate("/");
         }}
       />
-      <InnovationSheet
+      <DeferredSheet
+        component={InnovationSheet}
         isOpen={isInnovationOpen}
         onClose={() => {
           setIsInnovationOpen(false);
           navigate("/");
         }}
       />
-      <SustainableDevelopmentESGSheet
+      <DeferredSheet
+        component={SustainableDevelopmentESGSheet}
         isOpen={isSustainableDevelopmentESGOpen}
         onClose={() => {
           setIsSustainableDevelopmentESGOpen(false);
           navigate("/");
         }}
       />
-      <EthicsCorporateResbosilbility
+      <DeferredSheet
+        component={EthicsCorporateResbosilbility}
         isOpen={isEthicsCorporateResbosilbilityOpen}
         onClose={() => {
           setIsEthicsCorporateResbosilbilityOpen(false);
           navigate("/");
         }}
       />
-      <CorporateCultureValues
+      <DeferredSheet
+        component={CorporateCultureValues}
         isOpen={isCorporateCultureValuesOpen}
         onClose={() => {
           setIsCorporateCultureValuesOpen(false);
           navigate("/");
         }}
       />
-      <PublicWelfareCommunity
+      <DeferredSheet
+        component={PublicWelfareCommunity}
         isOpen={isPublicWelfareCommunityOpen}
         onClose={() => {
           setIsPublicWelfareCommunityOpen(false);
           navigate("/");
         }}
       />
-      <NewsSheet
+      <DeferredSheet
+        component={NewsSheet}
         isOpen={isNewsSheetOpen}
         onClose={() => {
           setIsNewsSheetOpen(false);
           navigate("/");
         }}
       />
-      <CorproateHonors
+      <DeferredSheet
+        component={CorproateHonors}
         isOpen={isCorporateHonorsOpen}
         onClose={() => {
           setIsCorporateHonorsOpen(false);
           navigate("/");
         }}
       />
-      <GlobalPresenceSheet
+      <DeferredSheet
+        component={GlobalPresenceSheet}
         isOpen={isGlobalPresenceSheetOpen}
         onClose={() => {
           setIsGlobalPresenceSheetOpen(false);
           navigate("/");
         }}
       />
-      <ContactsByRegionSheet
+      <DeferredSheet
+        component={ContactsByRegionSheet}
         isOpen={isContactsByRegionSheetOpen}
         onClose={() => {
           setIsContactsByRegionSheetOpen(false);
           navigate("/");
         }}
       />
-      <PartnersSheet
+      <DeferredSheet
+        component={PartnersSheet}
         isOpen={isPartnersSheetOpen}
         onClose={() => {
           setIsPartnersSheetOpen(false);
           navigate("/");
         }}
       />
-      <CollaborationOpportunitiesSheet
+      <DeferredSheet
+        component={CollaborationOpportunitiesSheet}
         isOpen={isCollaborationOpportunitiesSheetOpen}
         onClose={() => {
           setIsCollaborationOpportunitiesSheetOpen(false);
           navigate("/");
         }}
       />
-      <InvestorsSheet
+      <DeferredSheet
+        component={InvestorsSheet}
         isOpen={isInvestorsSheetOpen}
         onClose={() => {
           setIsInvestorsSheetOpen(false);
           navigate("/");
         }}
       />
-      <AtZFTGroupSheet
+      <DeferredSheet
+        component={AtZFTGroupSheet}
         isOpen={isAtZFTGroupSheetOpen}
         onClose={() => {
           setIsAtZFTGroupSheetOpen(false);
           navigate("/");
         }}
       />
-      <CareerOpportunitiesDevelopmentSheet
+      <DeferredSheet
+        component={CareerOpportunitiesDevelopmentSheet}
         isOpen={isCareerOpportunitiesDevelopmentSheetOpen}
         onClose={() => {
           setIsCareerOpportunitiesDevelopmentSheetOpen(false);
           navigate("/");
         }}
       />
-      <NonDiscriminationPolicySheet
+      <DeferredSheet
+        component={NonDiscriminationPolicySheet}
         isOpen={isNonDiscriminationPolicySheetOpen}
         onClose={() => {
           setIsNonDiscriminationPolicySheetOpen(false);
           navigate("/");
         }}
       />
-      <RecruitmentHumanResources
+      <DeferredSheet
+        component={RecruitmentHumanResources}
         isOpen={isRecruitmentHumanResourcesOpen}
         onClose={() => {
           setIsRecruitmentHumanResourcesOpen(false);
