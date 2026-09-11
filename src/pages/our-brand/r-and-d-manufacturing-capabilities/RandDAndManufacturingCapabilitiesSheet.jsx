@@ -24,8 +24,8 @@ export default function RandDAndManufacturingCapabilitiesSheet({
   ];
   const bodyParagraphs = [
     [
-      "我们拥有超过100人的研发团队以及超过30多年历炼的行业积淀，支持我们在产",
-      "品与系统上不断迭代创新、技术上不断前行。",
+      "我们拥有超过100人的研发团队以及超过30多年历炼的行业积淀，支持我们在产品与系统上不断迭代创新、技术上不断前行。",
+      "",
     ],
     [
       "在全球布局上，我们设立了覆盖中国，马来西亚，柬埔寨及越南，总面积超过18",
@@ -75,9 +75,14 @@ export default function RandDAndManufacturingCapabilitiesSheet({
         <div className="bottom-sheet-header rdmc-sheet-header">
           <h2 className="rdmc-sheet-title rdmc-sheet-title-bilingual">
             <span className="rdmc-sheet-title-cn">研发与制造能力</span>
-            <span className="rdmc-sheet-title-en" aria-label="R&D And Manufacturing Capabilities">
+            <span
+              className="rdmc-sheet-title-en"
+              aria-label="R&D And Manufacturing Capabilities"
+            >
               <span className="rdmc-sheet-title-line">R&D And</span>
-              <span className="rdmc-sheet-title-line">Manufacturing Capabilities</span>
+              <span className="rdmc-sheet-title-line">
+                Manufacturing Capabilities
+              </span>
             </span>
           </h2>
           <button
@@ -125,7 +130,10 @@ export default function RandDAndManufacturingCapabilitiesSheet({
             </div>
             <div className="rdmc-body-copy">
               {bodyParagraphs.map((paragraph, paragraphIndex) => (
-                <div key={`paragraph-${paragraphIndex}`} className="rdmc-paragraph">
+                <div
+                  key={`paragraph-${paragraphIndex}`}
+                  className="rdmc-paragraph"
+                >
                   {paragraph.map((line, lineIndex) => (
                     <div key={`${line}-${lineIndex}`}>{line}</div>
                   ))}
@@ -142,7 +150,6 @@ export default function RandDAndManufacturingCapabilitiesSheet({
               </div>
             </div>
           </div>
-
         </div>
         <SiteFooter />
       </section>
