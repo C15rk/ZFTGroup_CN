@@ -21,7 +21,7 @@ export const newsItems = [
       "第十站：2026李曼养猪大会\n    • 展会名称：2026李曼养猪大会会\n    • 展会时间：2026年10月22日-24日\n    • 展位号：W5130/W5132\n    • 展会地点：中原国际会展中心（郑州航空港经济综合实验区）\n第十五届李曼中国养猪大会暨世界猪业博览会是全球规模领先的生猪全产业链专业盛会，朝晖股份联合旗下洁弗共同参展，展示养猪行业空气与水过滤行业方案。"
     ],
     "mainImage": {
-      "src": "/news-exhibition-preview-2026-cn.jpg",
+      "src": "/news-exhibition-preview-2026-cn.webp",
       "alt": "2026 展会预告",
       "fullImage": true
     }
@@ -123,37 +123,37 @@ export const newsItems = [
       "朝晖股份凭借从材料自研、产品设计、模具开发到产品生产、测试的全链条自主可控体系，已走在行业前列。未来，朝晖股份将继续深耕环保包装领域，加大研发投入，根据更多新应用场景开发新品，致力于为全球客户提供更高品质、更环保的产品保护方案。期待与各品牌商携手，共同迈向绿色包装新未来。"
     ],
     "mainImage": {
-      "src": "/news-packcon-2026-1.png",
+      "src": "/news-packcon-2026-1.webp",
       "alt": "2026 PACKCON 中国包装容器展",
       "fullImage": true
     },
     "extraImages": [
       {
-        "src": "/news-packcon-2026-2.png",
+        "src": "/news-packcon-2026-2.webp",
         "alt": "2026 PACKCON visual 2"
       },
       {
-        "src": "/news-packcon-2026-3.png",
+        "src": "/news-packcon-2026-3.webp",
         "alt": "2026 PACKCON visual 3"
       },
       {
-        "src": "/news-packcon-2026-4.png",
+        "src": "/news-packcon-2026-4.webp",
         "alt": "2026 PACKCON visual 4"
       },
       {
-        "src": "/news-packcon-2026-5.png",
+        "src": "/news-packcon-2026-5.webp",
         "alt": "2026 PACKCON visual 5"
       },
       {
-        "src": "/news-packcon-2026-6.png",
+        "src": "/news-packcon-2026-6.webp",
         "alt": "2026 PACKCON visual 6"
       },
       {
-        "src": "/news-packcon-2026-7.png",
+        "src": "/news-packcon-2026-7.webp",
         "alt": "2026 PACKCON visual 7"
       },
       {
-        "src": "/news-packcon-2026-8.png",
+        "src": "/news-packcon-2026-8.webp",
         "alt": "2026 PACKCON visual 8"
       }
     ]
@@ -190,29 +190,29 @@ export const newsItems = [
       "本届广交会的成功参展，进一步推动了朝晖股份在环保领域的业务拓展，朝晖将持续深化与全球伙伴的合作，通过广交会平台链接更多资源，推动过滤技术向更高效、更可持续的方向发展。"
     ],
     "mainImage": {
-      "src": "/news-canton-spring-2026-1.jpg",
+      "src": "/news-canton-spring-2026-1.webp",
       "alt": "2026 春季广交会",
       "fullImage": true
     },
     "extraImages": [
       {
-        "src": "/news-canton-spring-2026-2.jpg",
+        "src": "/news-canton-spring-2026-2.webp",
         "alt": "2026 春季广交会 visual 2"
       },
       {
-        "src": "/news-canton-spring-2026-3.jpg",
+        "src": "/news-canton-spring-2026-3.webp",
         "alt": "2026 春季广交会 visual 3"
       },
       {
-        "src": "/news-canton-spring-2026-4.jpg",
+        "src": "/news-canton-spring-2026-4.webp",
         "alt": "2026 春季广交会 visual 4"
       },
       {
-        "src": "/news-canton-spring-2026-5.jpg",
+        "src": "/news-canton-spring-2026-5.webp",
         "alt": "2026 春季广交会 visual 5"
       },
       {
-        "src": "/news-canton-spring-2026-6.jpg",
+        "src": "/news-canton-spring-2026-6.webp",
         "alt": "2026 春季广交会 visual 6"
       }
     ]
@@ -244,17 +244,17 @@ export const newsItems = [
       "最后，尤总作总结讲话，同时针对复盘发现的问题，明确了下一步工作重点：要求各部门以本次复盘为契机，狠抓整改落实，强化目标管理，以 FMEA 管理推动经营效能提升，奋力实现 2026 年全年经营目标！"
     ],
     "mainImage": {
-      "src": "/news-q1-review-2026-1.jpg",
+      "src": "/news-q1-review-2026-1.webp",
       "alt": "2026 第一季度经营目标复盘会议",
       "fullImage": true
     },
     "extraImages": [
       {
-        "src": "/news-q1-review-2026-2.png",
+        "src": "/news-q1-review-2026-2.webp",
         "alt": "2026 第一季度经营目标复盘会议 visual 2"
       },
       {
-        "src": "/news-q1-review-2026-3.png",
+        "src": "/news-q1-review-2026-3.webp",
         "alt": "2026 第一季度经营目标复盘会议 visual 3"
       }
     ]
@@ -295,49 +295,49 @@ export const newsItems = [
       "感谢每一位莅临展位沟通的新老客户。未来，朝晖股份会继续专注环保纸袋研发生产，严控产品品质，优化定制服务，持续为全球客户提供高性价比、绿色合规的包装解决方案。我们也期待与更多行业伙伴携手同行，共赢绿色包装市场。"
     ],
     "mainImage": {
-      "src": "/news-interpack-2026-cn-0.png",
+      "src": "/news-interpack-2026-cn-0.webp",
       "alt": "2026 德国 interpack 环保包装",
       "fullImage": true
     },
     "extraImages": [
       {
-        "src": "/news-interpack-2026-cn-1.png",
+        "src": "/news-interpack-2026-cn-1.webp",
         "alt": "2026 德国 interpack visual 1"
       },
       {
-        "src": "/news-interpack-2026-cn-2.png",
+        "src": "/news-interpack-2026-cn-2.webp",
         "alt": "2026 德国 interpack visual 2"
       },
       {
-        "src": "/news-interpack-2026-cn-3.png",
+        "src": "/news-interpack-2026-cn-3.webp",
         "alt": "2026 德国 interpack visual 3"
       },
       {
-        "src": "/news-interpack-2026-cn-4.png",
+        "src": "/news-interpack-2026-cn-4.webp",
         "alt": "2026 德国 interpack visual 4"
       },
       {
-        "src": "/news-interpack-2026-cn-5.png",
+        "src": "/news-interpack-2026-cn-5.webp",
         "alt": "2026 德国 interpack visual 5"
       },
       {
-        "src": "/news-interpack-2026-cn-6.png",
+        "src": "/news-interpack-2026-cn-6.webp",
         "alt": "2026 德国 interpack visual 6"
       },
       {
-        "src": "/news-interpack-2026-cn-7.png",
+        "src": "/news-interpack-2026-cn-7.webp",
         "alt": "2026 德国 interpack visual 7"
       },
       {
-        "src": "/news-interpack-2026-cn-8.png",
+        "src": "/news-interpack-2026-cn-8.webp",
         "alt": "2026 德国 interpack visual 8"
       },
       {
-        "src": "/news-interpack-2026-cn-9.png",
+        "src": "/news-interpack-2026-cn-9.webp",
         "alt": "2026 德国 interpack visual 9"
       },
       {
-        "src": "/news-interpack-2026-cn-10.png",
+        "src": "/news-interpack-2026-cn-10.webp",
         "alt": "2026 德国 interpack visual 10"
       }
     ]

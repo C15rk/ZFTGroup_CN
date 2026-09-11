@@ -779,7 +779,7 @@ export default function HomePage({
                           <span className="section-card-media-inner">
                             <img
                               className="section-card-media-image"
-                              src="/news1.png"
+                              src="/news1.webp"
                               alt=""
                             />
                             <span className="section-card-media-overlay" />

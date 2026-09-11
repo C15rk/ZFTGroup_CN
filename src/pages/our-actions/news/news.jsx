@@ -283,7 +283,7 @@ export default function NewsSheet({ isOpen, onClose }) {
             onClick={onClose}
             aria-label="Close news"
           >
-            <img src="/cancel.png" alt="" />
+            <img src="/cancel.webp" alt="" />
           </button>
         </div>
 
