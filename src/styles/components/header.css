@@ -32,6 +32,7 @@
   border: none;
   background: var(--color-surface);
   color: var(--color-text);
+  text-decoration: none;
   padding: 6px 12px;
   padding-right: 0px;
   border-radius: 999px;
