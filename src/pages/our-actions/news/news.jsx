@@ -4,15 +4,6 @@ import { newsItems } from "../../../data/news.js";
 
 const ITEMS_PER_PAGE = 4;
 
-const FEATURED_NEWS_ORDER = [
-  "exhibition-preview-2026",
-  "ahr-expo-2026",
-  "packcon-2026",
-  "canton-fair-spring-2026",
-  "q1-business-review-2026",
-  "interpack-2026",
-];
-
 function renderStopParagraph(paragraph, index) {
   const [headline, ...restLines] = paragraph.split("\n");
 
@@ -156,18 +147,9 @@ export default function NewsSheet({ isOpen, onClose }) {
     () =>
       [...newsItems].sort(
         (a, b) => {
-          const aFeaturedIndex = FEATURED_NEWS_ORDER.indexOf(a.id);
-          const bFeaturedIndex = FEATURED_NEWS_ORDER.indexOf(b.id);
-          const aIsFeatured = aFeaturedIndex !== -1;
-          const bIsFeatured = bFeaturedIndex !== -1;
-
-          if (aIsFeatured && bIsFeatured) {
-            return aFeaturedIndex - bFeaturedIndex;
-          }
-
-          if (aIsFeatured) return -1;
-          if (bIsFeatured) return 1;
-
+          if (a.id === b.id) return 0;
+          if (a.id === "exhibition-preview-2026") return -1;
+          if (b.id === "exhibition-preview-2026") return 1;
           return new Date(b.date).getTime() - new Date(a.date).getTime();
         },
       ),
