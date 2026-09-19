@@ -54,6 +54,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 32px;
+}
+
+.rhr-sheet .rhr-details-link {
+  margin: 0;
+  max-width: 100%;
+  text-align: center;
+  font-family: var(--rhr-font-family);
+  font-size: 45px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.rhr-details-link a {
+  color: var(--color-footer-bg);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 3px;
 }
 
 .rhr-sheet > .footer {
@@ -72,5 +93,9 @@
 @media (max-width: 768px) {
   .rhr-sheet {
     --rhr-horizontal-gutter: 16px;
+  }
+
+  .rhr-sheet .rhr-details-link {
+    font-size: 14px;
   }
 }

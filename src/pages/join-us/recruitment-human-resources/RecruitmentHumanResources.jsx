@@ -49,6 +49,17 @@ export default function RecruitmentHumanResources({ isOpen, onClose }) {
             src="/rqr.webp"
             alt="Recruitment and human resources"
           />
+          <p className="rhr-details-link">
+            或点击👉🏻
+            <a
+              href="https://msearch.51job.com/jobs/all/co2565893.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              链接
+            </a>
+            查看详情
+          </p>
         </div>
 
         <SiteFooter />

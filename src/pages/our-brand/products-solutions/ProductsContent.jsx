@@ -8,20 +8,20 @@ export default function ProductsContent() {
       rows: [
         {
           label: "熔喷材料:",
-          url: "https://www.cofonmedia.com/meltblown/",
+          url: "https://www.cofon-media.com/?products_18/28.html",
           arrow: true,
         },
         {
           label: "PTFE材料:",
-          url: "https://www.cofonmedia.com/ptfe-membrane/",
+          url: "https://www.cofon-media.com/?products_14/24.html",
         },
         {
           label: "玻纤材料:",
-          url: "https://www.cofonmedia.com/glassfiber/",
+          url: "https://www.cofon-media.com/?products_15/25.html",
         },
         {
           label: "环保包装纸:",
-          url: "https://www.cofonmedia.com/composite-material/",
+          url: "https://www.cofon-media.com/?products_16/26.html",
         },
       ],
     },
@@ -33,16 +33,16 @@ export default function ProductsContent() {
       rows: [
         {
           label: "地面清洁:",
-          url: "https://www.seinfel.com/PRODUCTS/FloorCare/Paper",
+          url: "https://www.seinfel.com.cn/PRODUCTS/FloorCare/Paper",
           arrow: true,
         },
         {
           label: "家用空气净化:",
-          url: "https://www.seinfel.com/PRODUCTS/AirPuri/Dust",
+          url: "https://www.seinfel.com.cn/PRODUCTS/AirPuri/Dust",
         },
         {
           label: "商用及工业空气过滤:",
-          url: "https://www.seinfel.com/PRODUCTS/Commercial/pre",
+          url: "https://www.seinfel.com.cn/PRODUCTS/Commercial/pre",
         },
         {
           label: "汽车过滤:",
